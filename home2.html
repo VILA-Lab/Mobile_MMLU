@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMLU-Mobile Bench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #f4f6fa;
+        }
+
+        /* Header Styles with Image */
+        header {
+            background: linear-gradient(135deg, #6a1b9a, #64b5f6);
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            background: url('Images/Untitled_design_(5).png') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        header p {
+            font-size: 1.6em;
+            margin: 20px 0;
+            color: #e1e8f0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-buttons {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-buttons a {
+            display: inline-block;
+            margin: 15px 15px;
+            padding: 15px 25px;
+            background: #ffffff;
+            color: #6a1b9a;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background: #64b5f6;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .header-buttons a .fa {
+            margin-right: 10px;
+        }
+
+        /* Main Content Styles */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f9fafb;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #6a1b9a;
+            font-size: 2.4em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: #64b5f6;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #6a1b9a;
+            transform: scale(1.05);
+        }
+
+        /* Feature Section Styles */
+        .feature-section {
+            background: #e3f2fd;
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .feature h3 {
+            font-size: 2em;
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            color: #4a4a4a;
+            line-height: 1.5;
+        }
+
+        /* Adding Images for Creative Feel */
+        .feature img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #8e44ad;
+            color: #ffffff;
+            border-top: 5px solid #64b5f6;
+        }
+
+        /* Responsive Fix for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 20px;
+            }
+
+            .feature-section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobi-Genesis</h1>
+        <p>A Mobile Intelligence Massive Multitask Language Understanding Benchmark</p>
+        <div class="header-buttons">
+            <a href="#home"><i class="fa fa-home"></i>Home</a>
+            <a href="#leaderboard"><i class="fa fa-chart-bar"></i>Leaderboard</a>
+            <a href="#github"><i class="fa fa-github"></i>GitHub</a>
+            <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+            <a href="#x"><i class="fa fa-times"></i>X</a>
+        </div>
+    </header>
+
+    <main class="content">
+        <section id="intro">
+            <h2>Welcome to Mobi-Genesis</h2>
+            <p>Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across 80 diverse fields such as Education, Healthcare, and Technology. Mobi-Genesis is redefining mobile intelligence benchmarks for a smarter future.</p>
+            <a href="#benchmark" class="cta-button">Explore Benchmarks</a>
+        </section>
+
+        
+
+        <div class="feature-section">
+            <div class="feature">
+                <h3>Motivation</h3>
+                <p>Our Motivation</p>
+                <img src="Images/benchmark_results.png" alt="Motiviation">
+            </div>
+            <div class="feature">
+                <h3>Benchmark Results</h3>
+                <p>Discover the latest results from our interactive visualizations, comparing LLMs on performance, accuracy, and efficiency. Dive deep into the metrics and make informed decisions about the future of mobile intelligence.</p>
+                <img src="Images/benchmark_results.png" alt="Benchmark Results Visualization">
+            </div>
+
+            <div class="feature">
+                <h3>Our Methodology</h3>
+                <p>Learn about the robust methods used to create MMLU-Mobile Bench, using innovative metrics and groundbreaking evaluation techniques that set the standard for mobile-compatible AI models.</p>
+                <img src="Images/methodology.png" alt="Methodology Overview">
+            </div>
+
+            <div class="feature">
+                <h3>Data Analysis</h3>
+                <p>Explore our comprehensive dataset covering 80 fields, from technical disciplines to creative domains. Gain insight into the diversity and depth of the data that drives our benchmarks.</p>
+                <img src="Images/data_fields.png" alt="Data Analysis Overview">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MMLU-Mobile Bench. All rights reserved.</p>
+    </footer>
+</body>
+</html>
