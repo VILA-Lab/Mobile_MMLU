@@ -1,0 +1,225 @@
+
+        /* Reset and global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #f4f6fa;
+        }
+
+        /* Header Styles with Image */
+        header {
+            background: linear-gradient(135deg, #6a1b9a, #64b5f6);
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            background: url('Images/Untitled_design_(5).png') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        header p {
+            font-size: 1.6em;
+            margin: 20px 0;
+            color: #e1e8f0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-buttons {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-buttons a {
+            display: inline-block;
+            margin: 15px 15px;
+            padding: 15px 25px;
+            background: #ffffff;
+            color: #6a1b9a;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background: #64b5f6;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .header-buttons a .fa {
+            margin-right: 10px;
+        }
+
+        /* Main Content Styles */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f9fafb;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #6a1b9a;
+            font-size: 2.4em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: #64b5f6;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #6a1b9a;
+            transform: scale(1.05);
+        }
+
+        /* Feature Section Styles */
+        .feature-section {
+            background: #e8f2f9;
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .feature h3 {
+            font-size: 2em;
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            color: #4a4a4a;
+            line-height: 1.5;
+        }
+
+        /* Adding Images for Creative Feel */
+        .feature img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #8e44ad;
+            color: #ffffff;
+            border-top: 5px solid #64b5f6;
+        }
+        .methodology-feature {
+    text-align: left;
+    padding: 20px;
+     background: #f7fbfc; /*Matches other sections' white background */
+    border-radius: 10px;
+    box-shadow: none; /* Removes shadow for seamless integration */
+    margin: 20px auto;
+    /* max-width: 800px; */
+    max-width: 100%;
+}
+
+.methodology-feature h3 {
+    font-size: 1.8em;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.methodology-feature p {
+    font-size: 1.2em;
+    color: #333; /* Matches text color across the site */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.methodology-list {
+    list-style-type: disc; /* Adds simple bullets for a cleaner look */
+    padding-left: 20px;
+    margin: 0;
+}
+
+.methodology-list li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.methodology-list li strong {
+    color: #6a1b9a;
+}
+
+.methodology-feature img {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+        /* Responsive Fix for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 20px;
+            }
+
+            .feature-section {
+                padding: 50px 20px;
+            }
+        }

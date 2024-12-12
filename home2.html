@@ -6,184 +6,7 @@
     <title>MMLU-Mobile Bench</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Reset and global styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: #f4f6fa;
-        }
-
-        /* Header Styles with Image */
-        header {
-            background: linear-gradient(135deg, #6a1b9a, #64b5f6);
-            color: #ffffff;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-
-        header::before {
-            content: '';
-            background: url('Images/Untitled_design_(5).png') no-repeat center;
-            background-size: cover;
-            opacity: 0.1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
-
-        header p {
-            font-size: 1.6em;
-            margin: 20px 0;
-            color: #e1e8f0;
-            position: relative;
-            z-index: 2;
-        }
-
-        .header-buttons {
-            position: relative;
-            z-index: 2;
-        }
-
-        .header-buttons a {
-            display: inline-block;
-            margin: 15px 15px;
-            padding: 15px 25px;
-            background: #ffffff;
-            color: #6a1b9a;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .header-buttons a:hover {
-            background: #64b5f6;
-            color: #ffffff;
-            transform: scale(1.05);
-        }
-
-        .header-buttons a .fa {
-            margin-right: 10px;
-        }
-
-        /* Main Content Styles */
-        .content {
-            padding: 60px 20px;
-            text-align: center;
-            background: #f9fafb;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            color: #6a1b9a;
-            font-size: 2.4em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #4a4a4a;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background: #64b5f6;
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #6a1b9a;
-            transform: scale(1.05);
-        }
-
-        /* Feature Section Styles */
-        .feature-section {
-            background: #e3f2fd;
-            padding: 80px 20px;
-            border-radius: 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .feature h3 {
-            font-size: 2em;
-            color: #6a1b9a;
-            margin-bottom: 15px;
-        }
-
-        .feature p {
-            font-size: 1.1em;
-            color: #4a4a4a;
-            line-height: 1.5;
-        }
-
-        /* Adding Images for Creative Feel */
-        .feature img {
-            max-width: 80%;
-            height: auto;
-            margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #8e44ad;
-            color: #ffffff;
-            border-top: 5px solid #64b5f6;
-        }
-
-        /* Responsive Fix for Small Screens */
-        @media (max-width: 768px) {
-            header {
-                padding: 80px 20px;
-            }
-
-            .feature-section {
-                padding: 50px 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <header>
@@ -216,14 +39,36 @@
             <div class="feature">
                 <h3>Benchmark Results</h3>
                 <p>Discover the latest results from our interactive visualizations, comparing LLMs on performance, accuracy, and efficiency. Dive deep into the metrics and make informed decisions about the future of mobile intelligence.</p>
-                <img src="Images/benchmark_results.png" alt="Benchmark Results Visualization">
+                <img src="Images/mm.png" alt="Benchmark Results Visualization">
             </div>
 
             <div class="feature">
                 <h3>Our Methodology</h3>
-                <p>Learn about the robust methods used to create MMLU-Mobile Bench, using innovative metrics and groundbreaking evaluation techniques that set the standard for mobile-compatible AI models.</p>
-                <img src="Images/methodology.png" alt="Methodology Overview">
+                <p>Our methodology reflects a rigorous and systematic approach, designed to ensure not only quality but also practicality for mobile-based applications. By leveraging detailed planning and execution strategies, we aim to provide benchmarks that resonate with real-world use cases. Every step has been  designed and reviewed to uphold the highest standards of relevance, reliability, and scalability.</p>
+                <div class="methodology-feature">
+                    <p><strong>Our methodology is a detailed, multi-step process designed to ensure comprehensive and reliable benchmarks:</strong></p>
+                    <ol class="methodology-list">
+                        <li><strong>Field Selection:</strong> We began by conducting an in-depth search to identify fields that people frequently need or use in daily life, work, shopping, gaming, travel, or other scenarios. These fields were designed to align with mobile searches and user queries. These fields gathered from diverse sources including Wikipedia, various websites, and large language models to ensure inclusivity and relevance.</li>
+                        <li><strong>Question Structuring and Human Annotation:</strong> 
+                            <ul>
+                                <li>Questions were categorized into two types: standard questions and challenging scenario-based questions.</li>
+                                <li>The questions underwent multiple rounds of human annotation. This included generating the ground truth answers first and then creating multiple-choice questions (MCQs) based on the ground truth. The MCQs were crafted with the following principles:
+                                    <ul>
+                                        <li>Options were highly similar to the ground truth, differing only in specific keywords or subtle details to make them incorrect.</li>
+                                        <li>On average, MCQs were longer than the ground truth answers to test model precision.</li>
+                                        <li>Some questions included multiple correct answers for added complexity.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Quality Assurance:</strong> The generated questions were thoroughly reviewed for similarity and uniqueness. Any redundant or overly similar questions were removed. Additionally, each batch of questions underwent sampling and human verification to ensure accuracy and relevance.</li>
+                        <li><strong>Evaluation on LLMs:</strong> The curated dataset was used to evaluate various large language models across different scales, focusing particularly on those optimized for mobile usage. Evaluation metrics included latency, accuracy, and energy efficiency to ensure the benchmarks were practical for mobile environments.</li>
+                    </ol>
+                    <p><em>This meticulous process ensures that our benchmarks are not only comprehensive but also reflective of real-world mobile usage scenarios.</em></p>
+                    <img src="Images/pipeline_simple.jpg" alt="Methodology Overview">
+                </div>
             </div>
+            
 
             <div class="feature">
                 <h3>Data Analysis</h3>
