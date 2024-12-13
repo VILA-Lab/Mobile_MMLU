@@ -118,15 +118,29 @@
             transform: scale(1.05);
         }
 
-        /* Feature Section Styles */
-        .feature-section {
-            background: #e8f2f9;
-            padding: 80px 20px;
-            border-radius: 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+        /* Updated feature-section styles */
+.feature-section {
+    background: #f9f9fc;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.feature-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background: #6a1b9a;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
 
         .feature {
             display: flex;
@@ -167,7 +181,7 @@
         .methodology-feature {
     text-align: left;
     padding: 20px;
-     background: #f7fbfc; /*Matches other sections' white background */
+     background: #e5eff2; /*Matches other sections' white background */
     border-radius: 10px;
     box-shadow: none; /* Removes shadow for seamless integration */
     margin: 20px auto;
@@ -212,6 +226,59 @@
     border-radius: 10px;
 }
 
+/* Highlight styles for important terms */
+.highlight {
+    color: #6a1b9a;
+    font-weight: bold;
+    background: #f4ebfa;
+    padding: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.highlight:hover {
+    background: #6a1b9a;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.list-item {
+    background: #ffffff;
+    border: 2px solid #6a1b9a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.list-title {
+    font-size: 1.2em;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-title i {
+    font-size: 1.5em;
+    color: #64b5f6;
+}
+
+p {
+    font-size: 1em;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+
 
         /* Responsive Fix for Small Screens */
         @media (max-width: 768px) {
@@ -223,3 +290,5 @@
                 padding: 50px 20px;
             }
         }
+
+
