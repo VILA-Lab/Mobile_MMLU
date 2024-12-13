@@ -33,38 +33,96 @@
 
         <div class="feature-section">
             <div class="feature">
-                <h3 style="margin-top:0;"">Motivation</h3>
-                <p style="font-size: 1.27em;"><strong>Why <span class="highlight">Apple Intelligence</span> and <span class="highlight">Mobile Intelligence</span> Are Important for LLMs on Mobile Devices:</strong></p>
-
-
-                <div class="methodology-feature">
-                    <ol class="methodology-list">
-                        <li class="list-item">
-                            <div class="list-title">
-                                <i class="fa fa-mobile-alt"></i> <strong>On-Device Efficiency:</strong>
-                            </div>
-                            <p>Mobile devices, such as smartphones, tablets, and wearables, have limited computational resources compared to high-end servers. <span class="highlight">Apple Intelligence</span> and other mobile-focused AI frameworks prioritize optimization techniques to run small-scale large language models (LLMs) directly and efficiently on these constrained environments. Techniques like model compression, quantization, and efficient architectures (e.g., linear complexity models) are crucial for enabling LLMs to perform effectively on mobile devices. However, these models have limited capabilities.</p>
-                        </li>
-                        <li class="list-item">
-                            <div class="list-title">
-                                <i class="fa fa-shield-alt"></i> <strong>Personalization and Privacy:</strong>
-                            </div>
-                            <p>On-device LLMs can process user data locally without sending sensitive information to cloud servers. This ensures better privacy and security, a feature that aligns with Apple’s emphasis on user-centric privacy through its <span class="highlight">Apple Intelligence</span> ecosystem. <span class="highlight">Mobile Intelligence</span> allows models to adapt to user preferences, habits, and behaviors in real-time while safeguarding data.</p>
-                        </li>
-                        <li class="list-item">
-                            <div class="list-title">
-                                <i class="fa fa-bolt"></i> <strong>Low Latency:</strong>
-                            </div>
-                            <p>Running LLMs directly on <span class="highlight">mobile devices</span> eliminates the need for constant internet connectivity and reduces reliance on cloud infrastructure. This enables real-time responses and faster performance, which are critical for applications such as voice assistants, augmented reality, and on-device content generation.</p>
-                        </li>
-                        <li class="list-item">
-                            <div class="list-title">
-                                <i class="fa fa-globe"></i> <strong>Accessibility and Ubiquity:</strong>
-                            </div>
-                            <p><span class="highlight">Mobile devices</span> are used globally and form a significant part of everyday life. Integrating LLMs into mobile platforms broadens their accessibility, enabling users in low-bandwidth regions or offline environments to experience the benefits of AI seamlessly. <span class="highlight">Apple Intelligence</span> exemplifies how optimized LLMs can democratize advanced capabilities for mainstream users.</p>
-                        </li>                    </ol>
+                <h3 style="margin-top:0;">Motivation</h3>
+                <!-- Tabs for Navigation -->
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="showTab('importance')">Importance of Mobile Intelligence</button>
+                        <button class="tab-button" onclick="showTab('benchmark')">Why Mobile Benchmarks Matter</button>
+                    </div>
                 </div>
-             </div>
+        
+                <!-- Tab Content -->
+                <div id="importance" class="tab-content active">
+                    <p style="font-size: 1.27em;">
+                        <strong>Why <span class="highlight">Apple Intelligence</span> and <span class="highlight">Mobile Intelligence</span> Are Important for LLMs on Mobile Devices?</strong>
+                    </p>
+                    <div class="methodology-feature">
+                        <ol class="methodology-list">
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-mobile-alt"></i> <strong>On-Device Efficiency:</strong>
+                                </div>
+                                <p>Mobile devices, such as smartphones, tablets, and wearables, have limited computational resources compared to high-end servers. <span class="highlight">Apple Intelligence</span> and other mobile-focused AI frameworks prioritize optimization techniques to run small-scale large language models (LLMs) directly and efficiently on these constrained environments. Techniques like model compression, quantization, and efficient architectures (e.g., linear complexity models) are crucial for enabling LLMs to perform effectively on mobile devices. However, these models have limited capabilities.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-shield-alt"></i> <strong>Personalization and Privacy:</strong>
+                                </div>
+                                <p>On-device LLMs can process user data locally without sending sensitive information to cloud servers. This ensures better privacy and security, a feature that aligns with Apple’s emphasis on user-centric privacy through its <span class="highlight">Apple Intelligence</span> ecosystem. <span class="highlight">Mobile Intelligence</span> allows models to adapt to user preferences, habits, and behaviors in real-time while safeguarding data.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-bolt"></i> <strong>Low Latency:</strong>
+                                </div>
+                                <p>Running LLMs directly on <span class="highlight">mobile devices</span> eliminates the need for constant internet connectivity and reduces reliance on cloud infrastructure. This enables real-time responses and faster performance, which are critical for applications such as voice assistants, augmented reality, and on-device content generation.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-globe"></i> <strong>Accessibility and Ubiquity:</strong>
+                                </div>
+                                <p><span class="highlight">Mobile devices</span> are used globally and form a significant part of everyday life. Integrating LLMs into mobile platforms broadens their accessibility, enabling users in low-bandwidth regions or offline environments to experience the benefits of AI seamlessly. <span class="highlight">Apple Intelligence</span> exemplifies how optimized LLMs can democratize advanced capabilities for mainstream users.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+        
+                <div id="benchmark" class="tab-content">
+                    <p style="font-size: 1.27em;">
+                        <strong>Why a <span class="highlight">Mobile LLM Benchmark</span> Is Necessary to Identify Good Mobile LLMs?</strong>
+                    </p>
+                    <div class="methodology-feature">
+                        <ol class="methodology-list">
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-chart-line"></i> <strong>Performance Evaluation in Realistic Settings:</strong>
+                                </div>
+                                <p>A dedicated mobile LLM benchmark is essential to evaluate models under the real-world limitations of mobile devices, such as limited memory, energy constraints, and computational power. Traditional benchmarks often target cloud-based models without accounting for these restrictions.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-balance-scale"></i> <strong>Model Comparability:</strong>
+                                </div>
+                                <p>A standard benchmark allows researchers and developers to compare different LLM architectures, optimizations, and compression techniques fairly. Without such benchmarks, it is challenging to assess which models are suitable for mobile deployment.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-lightbulb"></i> <strong>Identifying Use-Specific Solutions:</strong>
+                                </div>
+                                <p>Mobile devices are integral to daily life, and integrating LLMs allows for personalized, real-time experiences such as smarter virtual assistants, contextual recommendations, and language understanding for apps. <span class="highlight">Apple Intelligence</span>, for example, enables LLMs to adapt to user behaviors, provide tailored responses, and improve applications like Siri, search, and messaging.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-cogs"></i> <strong>Driving Innovation:</strong>
+                                </div>
+                                <p>A benchmark provides clear goals for researchers and companies to innovate further. By setting performance, efficiency, and latency baselines, it encourages the development of new algorithms, architectures, and optimization strategies tailored to mobile platforms.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-sliders-h"></i> <strong>Accuracy vs. Efficiency Trade-off:</strong>
+                                </div>
+                                <p>Mobile LLMs require a balance between accuracy and resource efficiency. Benchmarks can identify the best-performing models that achieve high accuracy while maintaining fast inference times and low energy consumption on mobile hardware.</p>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-title">
+                                    <i class="fa fa-smile"></i> <strong>Improving End-User Experience:</strong>
+                                </div>
+                                <p>Ultimately, a mobile LLM benchmark helps identify models that deliver the best user experience on mobile devices. This includes fluid interactions, responsiveness, and minimal battery drain, making LLM-powered features practical and usable on a large scale.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
             <div class="feature">
                 <h3>Benchmark Results</h3>
                 <p>Discover the latest results from our interactive visualizations, comparing LLMs on performance, accuracy, and efficiency. Dive deep into the metrics and make informed decisions about the future of mobile intelligence.</p>
@@ -105,6 +163,18 @@
                 <img src="Images/data_fields.png" alt="Data Analysis Overview">
             </div>
         </div>
+
+        <script>
+            function showTab(tabId) {
+                const tabs = document.querySelectorAll('.tab-content');
+                const buttons = document.querySelectorAll('.tab-button');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                buttons.forEach(button => button.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+                document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            }
+        </script>
+        
     </main>
 
     <footer>
