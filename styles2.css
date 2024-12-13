@@ -306,6 +306,181 @@ p {
         display: block;
     }
 
+
+
+/* Field Card */
+/* Horizontal Fields Layout */
+.fields-horizontal {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next row if space runs out */
+    gap: 10px; /* Space between cards */
+    justify-content: space-between; /* Distributes cards evenly across the row */
+}
+
+/* Field Card */
+.field-card {
+    background: #ffffff;
+    border: 1px solid #e5eff2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    width: 40%;
+    flex: 0 0 calc(25% - 20px); /* Adjusts the width of each card to fit 4 per row */
+    font-size: 0.75em; /* Small font for compact layout */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Field Card Styling */
+.field-card {
+    background: linear-gradient(135deg, #f4f6fa, #ffffff); /* Subtle gradient */
+    border: 1px solid #e5eff2;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    flex: 0 0 calc(25% - 20px); /* For 4 cards per row */
+    font-size: 0.8em; /* Compact text */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.field-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f9fafb);
+}
+
+.field-card h4 {
+    font-size: 1em;
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+/* Question Block Styling */
+.question-block {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    border-left: 5px solid #6a1b9a;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.question-block.hard {
+    border-left: 5px solid #e74c3c; /* Red for hard questions */
+}
+
+.question-block h5 {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.question-block p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* MCQ Styling */
+ol {
+    list-style: none; /* Remove default numbering */
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+ol li:hover {
+    background: #f4f6fa;
+    transform: scale(1.02);
+}
+
+/* Correct Answer Highlight */
+ol li.correct {
+    background: #d4edda; /* Light green for correct answers */
+    border-left: 4px solid #28a745; /* Green bar on the left */
+    font-weight: bold;
+    position: relative;
+}
+
+ol li.correct::before {
+    content: "✔"; /* Checkmark indicator */
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-size: 1em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+    .field-card {
+        flex: 0 0 calc(33.33% - 20px); /* Adjust to 3 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .field-card {
+        flex: 0 0 calc(50% - 20px); /* Adjust to 2 cards per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .field-card {
+        flex: 0 0 100%; /* Stack cards vertically on very small screens */
+    }
+}
+/* Question Block */
+.question-block {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.question-block.original {
+    background: #f4f6fa;
+    border-left: 5px solid #6a1b9a;
+}
+
+.question-block.hard {
+    background: #fdecef;
+    border-left: 5px solid #e74c3c;
+}
+
+.question-block h5 {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.question-block p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* MCQ Styling */
+ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 5px;
+    line-height: 1.2;
+    font-size: 0.75em;
+}
         /* Responsive Fix for Small Screens */
         @media (max-width: 768px) {
             header {
