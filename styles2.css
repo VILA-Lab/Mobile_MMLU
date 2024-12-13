@@ -268,17 +268,42 @@
 }
 
 .list-title i {
-    font-size: 1.5em;
+    font-size: 1em;
     color: #64b5f6;
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.6em;
     color: #4a4a4a;
     line-height: 1.6;
 }
 
+.tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 
+    .tab-button {
+        padding: 10px 20px;
+        border: none;
+        background: #6a1b9a;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .tab-button.active {
+        background: #64b5f6;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
 
         /* Responsive Fix for Small Screens */
         @media (max-width: 768px) {
