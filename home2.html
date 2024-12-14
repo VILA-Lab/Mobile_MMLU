@@ -18,7 +18,6 @@
             <a href="#leaderboard"><i class="fa fa-chart-bar"></i>Leaderboard</a>
             <a href="#github"><i class="fa fa-github"></i>GitHub</a>
             <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
-            <a href="#x"><i class="fa fa-times"></i>X</a>
         </div>
     </header>
 
@@ -26,7 +25,7 @@
         <section id="intro">
             <h2>Welcome to Mobi-Genesis</h2>
             <p>Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across 80 diverse fields such as Education, Healthcare, and Technology. Mobi-Genesis is redefining mobile intelligence benchmarks for a smarter future.</p>
-            <a href="#benchmark" class="cta-button">Explore Benchmarks</a>
+            <a href="#benchmark" class="cta-button">Explore Mobile Benchmark</a>
         </section>
 
 
@@ -43,14 +42,14 @@
         
                 <!-- Tab Content -->
                 <div id="importance" class="tab-content active">
-                    <p style="font-size: 1.27em;">
+                    <p style="font-size: 1.2em;">
                         <strong>Why <span class="highlight">Apple Intelligence</span> and <span class="highlight">Mobile Intelligence</span> Are Important for LLMs on Mobile Devices?</strong>
                     </p>
-                    <div class="methodology-feature">
+                    <div class="methodology-feature" id="motivation">
                         <ol class="methodology-list">
                             <li class="list-item">
                                 <div class="list-title">
-                                    <i class="fa fa-mobile-alt"></i> <strong>On-Device Efficiency:</strong>
+                                    <i class="fa fa-mobile-alt" ></i> <strong>On-Device Efficiency:</strong>
                                 </div>
                                 <p>Mobile devices, such as smartphones, tablets, and wearables, have limited computational resources compared to high-end servers. <span class="highlight">Apple Intelligence</span> and other mobile-focused AI frameworks prioritize optimization techniques to run small-scale large language models (LLMs) directly and efficiently on these constrained environments. Techniques like model compression, quantization, and efficient architectures (e.g., linear complexity models) are crucial for enabling LLMs to perform effectively on mobile devices. However, these models have limited capabilities.</p>
                             </li>
@@ -80,7 +79,7 @@
                     <p style="font-size: 1.27em;">
                         <strong>Why a <span class="highlight">Mobile LLM Benchmark</span> Is Necessary to Identify Good Mobile LLMs?</strong>
                     </p>
-                    <div class="methodology-feature">
+                    <div class="methodology-feature" id="motivation">
                         <ol class="methodology-list">
                             <li class="list-item">
                                 <div class="list-title">
@@ -124,59 +123,70 @@
             </div>
             <div class="feature">
                 <h3>Benchmark Overview</h3>
-                <p style="font-size: 1.27em;">Our dataset spans 80 fields, each containing two types of questions: <span class="highlight">Original</span> and <span class="highlight">Hard</span>. Below is a subset of 6 fields showcasing both question types.</p>
-            
+                <p style="font-size: 1.27em;">
+                    Our dataset encompasses 80 fields, each featuring various types of questions, including <span class="highlight">scenario-based</span> questions. Below is a subset of 6 fields showcasing the diversity of question types.
+                </p>
+                            
                 <!-- Horizontal Fields Layout -->
                 <div class="fields-horizontal">
                     <!-- Field 1: Cooking -->
                     <div class="field-card">
-                        <h4>Cooking</h4>
+                        <h4>Mental Health</h4>
                         <div class="question-block original">
-                            <h5>Original</h5>
-                            <p><strong>Question:</strong> How do I plan meals for someone with gluten intolerance?</p>
+                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
+                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
+                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
+                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
+                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
+                                <br>
+                                Which of the statements given above are correct?
+                            </p>
                             <ol>
-                                <li>a) Plan meals by selecting naturally lactose-free foods. (Incorrect)</li>
-                                <li>b) Plan meals by selecting naturally gluten-free foods such as apples and carrots. (Incorrect)</li>
-                                <li>c) Plan meals by selecting naturally gluten-free foods like rice and quinoa. (Answer)</li>
-                                <li>d) Plan meals by selecting gluten-free grains like spelt and bulgur. (Incorrect)</li>
+                                <li>a) (1) and (2)</li>
+                                <li class="correct">b) (1), (2), (3) and (4)</li>
+                                <li>c) (1), (2) and (4)</li>
+                                <li>d) (2) only</li>
                             </ol>
                         </div>
-                        <div class="question-block hard">
+                        <!-- <div class="question-block hard">
                             <h5>Hard</h5>
-                            <p><strong>Question:</strong> What is the most effective way to develop a balanced gluten-free meal plan?</p>
+                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
                             <ol>
-                                <li>a) Eliminate all grains entirely. (Incorrect)</li>
-                                <li>b) Include nutrient-rich gluten-free grains and vegetables. (Answer)</li>
-                                <li>c) Focus only on pre-packaged gluten-free products. (Incorrect)</li>
+                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
                             </ol>
-                        </div>
+                        </div> -->
                     </div>
             
                     <!-- Field 2: Nutrition -->
                     <div class="field-card">
-                        <h4>Nutrition</h4>
+                        <h4>Communication and Public Speaking </h4>
                         <div class="question-block original">
                             <h5>Original</h5>
-                            <p><strong>Question:</strong> What are healthy snack options for someone on a low-carb diet?</p>
+                            <p><strong>Question:</strong> What are some signs your audience is not understanding your message?</p>
                             <ol>
-                                <li>a) Chips and soda. (Incorrect)</li>
-                                <li>b) Nuts, seeds, and non-starchy vegetables like celery. (Answer)</li>
-                                <li>c) Sugary granola bars. (Incorrect)</li>
+                                <li>a) Signs your audience is not understanding your message include perplexed facial expressions, an evident lack of enthusiasm or attentiveness, numerous queries that diverge from the core topic, and misguided or incorrect answers indicating confusion.</li>
+                                <li>b) Signs your audience is not understanding your message include bewildered facial expressions, a visible lack of interest or focus, repeated inquiries that deviate from the main subject, and inappropriate or wrong replies that suggest a disconnect.</li>
+                                <li>c) Signs your audience is not understanding your message include puzzled facial expressions, a noticeable lack of participation or interaction, sporadic questions that go off-topic, and unrelated or inaccurate feedback that indicates misunderstanding.</li>
+                            <li  class="correct">d) Signs your audience is not understanding your message include confused facial expressions, lack of engagement or eye contact, frequent questions seeking clarification, and irrelevant or incorrect responses.</li>
                             </ol>
                         </div>
-                        <div class="question-block hard">
+                        <!-- <div class="question-block hard">
                             <h5>Hard</h5>
-                            <p><strong>Question:</strong> What is the glycemic impact of different low-carb snack choices?</p>
+                            <p><strong>Question:</strong>How do I ensure that my keynote speech delivered via a mobile app maintains its intended impact despite potential connectivity issues?</p>
                             <ol>
-                                <li>a) High-impact for all snacks. (Incorrect)</li>
-                                <li>b) Low-impact for nuts and seeds. (Answer)</li>
-                                <li>c) Low-impact for sugary granola bars. (Incorrect)</li>
+                                <li>a) To ensure your keynote speech retains its intended impact despite potential connectivity issues, you should download all essential presentation materials, such as slides, images, and texts, to your device in advance so you can deliver them offline. Moreover, have a contingency plan like handwritten notes or an electronic copy of your speech. Test the mobile app's offline functionality beforehand, and think about using a portable data modem for connectivity backup. Additionally, notify your audience about potential connectivity interruptions at the beginning and engage them with interactive activities that do not depend on online access.</li>
+                                <li>b) To ensure your keynote speech achieves its intended impact despite potential connectivity problems, you should download all vital presentation materials, such as slides, graphics, and transcripts, to your device in advance to ensure offline presentation. Additionally, prepare a contingency plan with digital notes or a hard copy of your speech. Test the mobile app's offline options ahead of time, and consider using a mobile network hotspot for connectivity assurance. Also, alert your audience to any potential connectivity issues at the start and engage them with interactive features that do not demand internet service.</li>
+                                <li class="correct">c) To ensure your keynote speech maintains its intended impact despite potential connectivity issues, you should download all necessary presentation materials (slides, videos, audio) to your device in advance so you can present offline. Additionally, have a backup plan, such as printed notes or a local copy of your speech. Test the mobile app's offline capabilities beforehand, and consider using a portable Wi-Fi hotspot for connectivity redundancy. Also, inform your audience about potential connectivity issues at the start and engage them with interactive elements that do not rely on internet access.</li>
+                                <li>d) To ensure your keynote speech holds its intended effect despite potential connectivity problems, you should download all critical presentation materials, including slides, animations, and documents, to your device beforehand so you can present offline. Furthermore, have an alternative plan, such as physical notes or a saved copy of your speech. Evaluate the mobile app's offline features in advance, and consider using a cellular data connection for connectivity backup. It's also important to inform your audience about possible connectivity concerns at the outset and engage them with interactive components that do not require internet connectivity.</li>
                             </ol>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Field 1: Cooking -->
                     <div class="field-card">
-                        <h4>Cooking</h4>
+                        <h4>Cooking and Recipes</h4>
                         <div class="question-block original">
                             <h5>Original</h5>
                             <p><strong>Question:</strong> How do I plan meals for someone with gluten intolerance?</p>
@@ -192,7 +202,7 @@
                                     and gluten-free grains like bulgur, spelt, and sorghum. Read labels carefully to avoid gluten-containing additives and consider certified organic products. (Incorrect)</li>
                             </ol>
                         </div>
-                        <div class="question-block hard">
+                        <!-- <div class="question-block hard">
                             <h5>Hard</h5>
                             <p><strong>Question:</strong> I have leftover cooked polenta that's hardened in the fridge; how can I transform it into a new, appetizing dish?</p>
                             <ol>
@@ -218,7 +228,7 @@
                                     barbecue for a smoky flavor.
                                          (Incorrect)</li>    
                             </ol>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Field 1: Cooking -->
@@ -234,7 +244,7 @@
                                 <li>d) Plan meals by selecting gluten-free grains like spelt and bulgur. (Incorrect)</li>
                             </ol>
                         </div>
-                        <div class="question-block hard">
+                        <!-- <div class="question-block hard">
                             <h5>Hard</h5>
                             <p><strong>Question:</strong> What is the most effective way to develop a balanced gluten-free meal plan?</p>
                             <ol>
@@ -242,7 +252,7 @@
                                 <li>b) Include nutrient-rich gluten-free grains and vegetables. (Answer)</li>
                                 <li>c) Focus only on pre-packaged gluten-free products. (Incorrect)</li>
                             </ol>
-                        </div>
+                        </div> -->
                     </div>
 
             
@@ -262,9 +272,11 @@
             <div class="feature">
                 <h3>Our Methodology</h3>
                 <p>Our methodology reflects a rigorous and systematic approach, designed to ensure not only quality but also practicality for mobile-based applications. By leveraging detailed planning and execution strategies, we aim to provide benchmarks that resonate with real-world use cases. Every step has been  designed and reviewed to uphold the highest standards of relevance, reliability, and scalability.</p>
-                <div class="methodology-feature">
+                <div class="methodology-feature" id="metho">
+                    <img src="Images/pipeline_simple.jpg" alt="Methodology Overview">
                     <p><strong>Our methodology is a detailed, multi-step process designed to ensure comprehensive and reliable benchmarks:</strong></p>
-                    <ol class="methodology-list">
+                    
+                    <ol class="methodology-list" id="content-metho">
                         <li><strong>Field Selection:</strong> We began by conducting an in-depth search to identify fields that people frequently need or use in daily life, work, shopping, gaming, travel, or other scenarios. These fields were designed to align with mobile searches and user queries. These fields gathered from diverse sources including Wikipedia, various websites, and large language models to ensure inclusivity and relevance.</li>
                         <li><strong>Question Structuring and Human Annotation:</strong> 
                             <ul>
@@ -282,7 +294,6 @@
                         <li><strong>Evaluation on LLMs:</strong> The curated dataset was used to evaluate various large language models across different scales, focusing particularly on those optimized for mobile usage. Evaluation metrics included latency, accuracy, and energy efficiency to ensure the benchmarks were practical for mobile environments.</li>
                     </ol>
                     <p><em>This meticulous process ensures that our benchmarks are not only comprehensive but also reflective of real-world mobile usage scenarios.</em></p>
-                    <img src="Images/pipeline_simple.jpg" alt="Methodology Overview">
                 </div>
             </div>
             
