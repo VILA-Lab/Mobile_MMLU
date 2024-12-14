@@ -6,7 +6,7 @@
     <title>MMLU-Mobile Bench</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -124,64 +124,75 @@
             <div class="feature">
                 <h3>Benchmark Overview</h3>
                 <p style="font-size: 1.27em;">
-                    Our dataset encompasses 80 fields, each featuring various types of questions, including <span class="highlight">scenario-based</span> questions. Below is a subset of 6 fields showcasing the diversity of question types.
+                    Our dataset encompasses 80 fields, each featuring various types of questions, including <span class="highlight">scenario-based</span> questions. Below is a subset of 8 fields showcasing the diversity of question types.
                 </p>
                             
                 <!-- Horizontal Fields Layout -->
                 <div class="fields-horizontal">
-                    <!-- Field 1: Cooking -->
+                    <!-- Field 2: Nutrition -->
                     <div class="field-card">
-                        <h4>Mental Health</h4>
+                        <h4>Home maintenance </h4>
                         <div class="question-block original">
-                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
-                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
-                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
-                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
-                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
-                                <br>
-                                Which of the statements given above are correct?
-                            </p>
+                           
+                            <p><strong>Question:</strong>After installing a new dishwasher, I find that dishes aren't cleaning properly, and the appliance occasionally leaks. I've confirmed proper installation. What other issues should I consider, and how can I troubleshoot effectively?</p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
                             <ol>
-                                <li>a) (1) and (2)</li>
-                                <li class="correct">b) (1), (2), (3) and (4)</li>
-                                <li>c) (1), (2) and (4)</li>
-                                <li>d) (2) only</li>
+                                <li>a) In case your dishwasher is not cleaning dishes as expected and is leaking occasionally despite confirming it is installed properly, you should look into a few possible issues. Ensure that the dishwasher is not overloaded, as this can restrict the movement of spray arms. Check that the spray arms aren't bent or misaligned, which can hinder water flow to the dishes. It's important to confirm that the water supply is reliable and that the water inlet valve is not clogged, ensuring it meets the machine's requirements. Make sure you're using a detergent suitable for your water hardness level and that the detergent compartment isn't blocked. To address leaks, inspect the door seal for any tears or wrinkles that could prevent a proper seal. Additionally, check the dishwasher's drain pump and connections for any signs of leaks or clogs. Running a descaling cycle with a specialized cleaner can help remove mineral deposits that might be affecting performance. If these steps don't resolve the issue, consulting the dishwasher's troubleshooting guide or contacting a technician may be needed.</li>
+                                <li>b) If your dishwasher is not cleaning dishes properly and is occasionally leaking even after confirming that the installation is correct, you should consider several factors. First, ensure the dishes are loaded in a manner that does not obstruct the drying fan, as this can lead to inadequate cleaning. Check that the spray arms are not damaged or missing, which can prevent water from reaching the dishes effectively. Make sure the water supply is consistent and that the water inlet valve is not partially closed, as this can impact performance. Verify that the detergent is the correct type for your dishwasher model and that the dispenser isn't jammed. For leaks, inspect the door seal for any punctures or misalignment that may prevent it from sealing effectively. Additionally, ensure the drain hose is securely connected and free of bends that might cause leaks. Running a cleaning cycle with a high-efficiency cleaner can also help remove stubborn buildup. If issues persist, reviewing the user manual for advanced troubleshooting or seeking professional repair advice might be necessary.</li>
+                                <li class="correct">c)If your dishwasher is not cleaning dishes properly and is occasionally leaking despite confirming proper installation, there are several issues to consider. First, ensure the dishwasher is loaded correctly, with dishes not blocking the spray arms. Check that the spray arms are not clogged with debris, which can prevent water from reaching the dishes. Make sure the water supply is adequate; the water inlet valve should be fully open, and the water pressure should meet the dishwasher's specifications. Also, verify that the detergent you're using is appropriate and not expired, and that the detergent dispenser is functioning correctly. For leaks, inspect the door seal for damage or debris that may prevent it from sealing properly. Additionally, check the dishwasher's drain hose and connections for leaks or clogs. Running a cleaning cycle with a dishwasher cleaner can also help remove any buildup that might be affecting performance. If problems persist, consider consulting the dishwasher's manual for specific troubleshooting tips or contacting a professional for repair.</li>
+                            <li>d) If your dishwasher is not performing well at cleaning dishes and occasionally leaks despite confirming that it is installed correctly, several aspects should be examined. First, load the dishwasher ensuring that dishes do not interfere with the drying elements, as this can compromise cleaning efficiency. Verify that the spray arms are not obstructed by utensils, which can block water from reaching the dishes. Ensure the water supply is stable and that the water inlet valve is not faulty, meeting the dishwasher's specifications for water pressure. Check that the detergent isn't the wrong type for your specific dishwasher brand and that the dispensing unit is not malfunctioning. For leaks, examine the door seal for any signs of hardening or deformation that might prevent it from sealing properly. Additionally, inspect the dishwasher's float switch and connections for any leaks or blockages. Running a sanitation cycle with a dishwasher-safe cleaner can remove any hidden residues affecting functionality. If these measures fail, refer to the appliance's manual for further troubleshooting steps or seek professional service.</li>
                             </ol>
+                            </div>
                         </div>
-                        <!-- <div class="question-block hard">
-                            <h5>Hard</h5>
-                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
-                            <ol>
-                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
-                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
-                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
-                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
-                            </ol>
+                        <!-- <div class="question-block original">
+                            <p><strong>Question:</strong> After installing a new dishwasher, I find that dishes aren't cleaning properly, and the appliance occasionally leaks. I've confirmed proper installation. What other issues should I consider?</p>
+                            <button class="toggle-btn">Show Details</button>
+                            <div class="details hidden">
+                                <ol>
+                                    <li>Ensure the dishwasher is not overloaded.</li>
+                                    <li>Check that spray arms aren't clogged or misaligned.</li>
+                                    <li>Inspect the water inlet valve and ensure proper water pressure.</li>
+                                    <li>Verify detergent compatibility and dispenser functionality.</li>
+                                    <li>Examine the door seal for damage or debris.</li>
+                                    <li>Inspect drain connections for leaks or blockages.</li>
+                                </ol>
+                            </div>
                         </div> -->
                     </div>
+
+                    
+                   
             
                     <!-- Field 2: Nutrition -->
                     <div class="field-card">
-                        <h4>Communication and Public Speaking </h4>
+                        <h4>Home maintenance </h4>
                         <div class="question-block original">
-                            <h5>Original</h5>
-                            <p><strong>Question:</strong> What are some signs your audience is not understanding your message?</p>
+                           
+                            <p><strong>Question:</strong>After installing a new dishwasher, I find that dishes aren't cleaning properly, and the appliance occasionally leaks. I've confirmed proper installation. What other issues should I consider, and how can I troubleshoot effectively?</p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
                             <ol>
-                                <li>a) Signs your audience is not understanding your message include perplexed facial expressions, an evident lack of enthusiasm or attentiveness, numerous queries that diverge from the core topic, and misguided or incorrect answers indicating confusion.</li>
-                                <li>b) Signs your audience is not understanding your message include bewildered facial expressions, a visible lack of interest or focus, repeated inquiries that deviate from the main subject, and inappropriate or wrong replies that suggest a disconnect.</li>
-                                <li>c) Signs your audience is not understanding your message include puzzled facial expressions, a noticeable lack of participation or interaction, sporadic questions that go off-topic, and unrelated or inaccurate feedback that indicates misunderstanding.</li>
-                            <li  class="correct">d) Signs your audience is not understanding your message include confused facial expressions, lack of engagement or eye contact, frequent questions seeking clarification, and irrelevant or incorrect responses.</li>
+                                <li>a) In case your dishwasher is not cleaning dishes as expected and is leaking occasionally despite confirming it is installed properly, you should look into a few possible issues. Ensure that the dishwasher is not overloaded, as this can restrict the movement of spray arms. Check that the spray arms aren't bent or misaligned, which can hinder water flow to the dishes. It's important to confirm that the water supply is reliable and that the water inlet valve is not clogged, ensuring it meets the machine's requirements. Make sure you're using a detergent suitable for your water hardness level and that the detergent compartment isn't blocked. To address leaks, inspect the door seal for any tears or wrinkles that could prevent a proper seal. Additionally, check the dishwasher's drain pump and connections for any signs of leaks or clogs. Running a descaling cycle with a specialized cleaner can help remove mineral deposits that might be affecting performance. If these steps don't resolve the issue, consulting the dishwasher's troubleshooting guide or contacting a technician may be needed.</li>
+                                <li>b) If your dishwasher is not cleaning dishes properly and is occasionally leaking even after confirming that the installation is correct, you should consider several factors. First, ensure the dishes are loaded in a manner that does not obstruct the drying fan, as this can lead to inadequate cleaning. Check that the spray arms are not damaged or missing, which can prevent water from reaching the dishes effectively. Make sure the water supply is consistent and that the water inlet valve is not partially closed, as this can impact performance. Verify that the detergent is the correct type for your dishwasher model and that the dispenser isn't jammed. For leaks, inspect the door seal for any punctures or misalignment that may prevent it from sealing effectively. Additionally, ensure the drain hose is securely connected and free of bends that might cause leaks. Running a cleaning cycle with a high-efficiency cleaner can also help remove stubborn buildup. If issues persist, reviewing the user manual for advanced troubleshooting or seeking professional repair advice might be necessary.</li>
+                                <li class="correct">c)If your dishwasher is not cleaning dishes properly and is occasionally leaking despite confirming proper installation, there are several issues to consider. First, ensure the dishwasher is loaded correctly, with dishes not blocking the spray arms. Check that the spray arms are not clogged with debris, which can prevent water from reaching the dishes. Make sure the water supply is adequate; the water inlet valve should be fully open, and the water pressure should meet the dishwasher's specifications. Also, verify that the detergent you're using is appropriate and not expired, and that the detergent dispenser is functioning correctly. For leaks, inspect the door seal for damage or debris that may prevent it from sealing properly. Additionally, check the dishwasher's drain hose and connections for leaks or clogs. Running a cleaning cycle with a dishwasher cleaner can also help remove any buildup that might be affecting performance. If problems persist, consider consulting the dishwasher's manual for specific troubleshooting tips or contacting a professional for repair.</li>
+                            <li>d) If your dishwasher is not performing well at cleaning dishes and occasionally leaks despite confirming that it is installed correctly, several aspects should be examined. First, load the dishwasher ensuring that dishes do not interfere with the drying elements, as this can compromise cleaning efficiency. Verify that the spray arms are not obstructed by utensils, which can block water from reaching the dishes. Ensure the water supply is stable and that the water inlet valve is not faulty, meeting the dishwasher's specifications for water pressure. Check that the detergent isn't the wrong type for your specific dishwasher brand and that the dispensing unit is not malfunctioning. For leaks, examine the door seal for any signs of hardening or deformation that might prevent it from sealing properly. Additionally, inspect the dishwasher's float switch and connections for any leaks or blockages. Running a sanitation cycle with a dishwasher-safe cleaner can remove any hidden residues affecting functionality. If these measures fail, refer to the appliance's manual for further troubleshooting steps or seek professional service.</li>
                             </ol>
+                            </div>
                         </div>
-                        <!-- <div class="question-block hard">
-                            <h5>Hard</h5>
-                            <p><strong>Question:</strong>How do I ensure that my keynote speech delivered via a mobile app maintains its intended impact despite potential connectivity issues?</p>
-                            <ol>
-                                <li>a) To ensure your keynote speech retains its intended impact despite potential connectivity issues, you should download all essential presentation materials, such as slides, images, and texts, to your device in advance so you can deliver them offline. Moreover, have a contingency plan like handwritten notes or an electronic copy of your speech. Test the mobile app's offline functionality beforehand, and think about using a portable data modem for connectivity backup. Additionally, notify your audience about potential connectivity interruptions at the beginning and engage them with interactive activities that do not depend on online access.</li>
-                                <li>b) To ensure your keynote speech achieves its intended impact despite potential connectivity problems, you should download all vital presentation materials, such as slides, graphics, and transcripts, to your device in advance to ensure offline presentation. Additionally, prepare a contingency plan with digital notes or a hard copy of your speech. Test the mobile app's offline options ahead of time, and consider using a mobile network hotspot for connectivity assurance. Also, alert your audience to any potential connectivity issues at the start and engage them with interactive features that do not demand internet service.</li>
-                                <li class="correct">c) To ensure your keynote speech maintains its intended impact despite potential connectivity issues, you should download all necessary presentation materials (slides, videos, audio) to your device in advance so you can present offline. Additionally, have a backup plan, such as printed notes or a local copy of your speech. Test the mobile app's offline capabilities beforehand, and consider using a portable Wi-Fi hotspot for connectivity redundancy. Also, inform your audience about potential connectivity issues at the start and engage them with interactive elements that do not rely on internet access.</li>
-                                <li>d) To ensure your keynote speech holds its intended effect despite potential connectivity problems, you should download all critical presentation materials, including slides, animations, and documents, to your device beforehand so you can present offline. Furthermore, have an alternative plan, such as physical notes or a saved copy of your speech. Evaluate the mobile app's offline features in advance, and consider using a cellular data connection for connectivity backup. It's also important to inform your audience about possible connectivity concerns at the outset and engage them with interactive components that do not require internet connectivity.</li>
-                            </ol>
+                        <!-- <div class="question-block original">
+                            <p><strong>Question:</strong> After installing a new dishwasher, I find that dishes aren't cleaning properly, and the appliance occasionally leaks. I've confirmed proper installation. What other issues should I consider?</p>
+                            <button class="toggle-btn">Show Details</button>
+                            <div class="details hidden">
+                                <ol>
+                                    <li>Ensure the dishwasher is not overloaded.</li>
+                                    <li>Check that spray arms aren't clogged or misaligned.</li>
+                                    <li>Inspect the water inlet valve and ensure proper water pressure.</li>
+                                    <li>Verify detergent compatibility and dispenser functionality.</li>
+                                    <li>Examine the door seal for damage or debris.</li>
+                                    <li>Inspect drain connections for leaks or blockages.</li>
+                                </ol>
+                            </div>
                         </div> -->
                     </div>
                     <!-- Field 1: Cooking -->
@@ -190,6 +201,8 @@
                         <div class="question-block original">
                             <h5>Original</h5>
                             <p><strong>Question:</strong> How do I plan meals for someone with gluten intolerance?</p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
                             <ol>
                                 <li>a) Plan meals by selecting naturally lactose-free foods such as citrus fruits, leafy vegetables, lean poultry, seafood, non-dairy milk alternatives like 
                                     almond and soy milk, and gluten-free grains like barley, oats, and millet. Read labels carefully to avoid lactose-containing ingredients and consider
@@ -201,6 +214,7 @@
                                 <li>d) Plan meals by selecting naturally gluten-free foods like tropical fruits, root vegetables, red meats, shellfish, plant-based dairy alternatives, 
                                     and gluten-free grains like bulgur, spelt, and sorghum. Read labels carefully to avoid gluten-containing additives and consider certified organic products. (Incorrect)</li>
                             </ol>
+                            </div>
                         </div>
                         <!-- <div class="question-block hard">
                             <h5>Hard</h5>
@@ -233,16 +247,18 @@
 
                     <!-- Field 1: Cooking -->
                     <div class="field-card">
-                        <h4>Cooking</h4>
+                        <h4>First Aid</h4>
                         <div class="question-block original">
-                            <h5>Original</h5>
-                            <p><strong>Question:</strong> How do I plan meals for someone with gluten intolerance?</p>
+                            <p><strong>Question:</strong>Someone is bleeding profusely from their leg after an accident; I applied pressure but it's not stopping; should I use a tourniquet, and how?</p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
                             <ol>
-                                <li>a) Plan meals by selecting naturally lactose-free foods. (Incorrect)</li>
-                                <li>b) Plan meals by selecting naturally gluten-free foods such as apples and carrots. (Incorrect)</li>
-                                <li>c) Plan meals by selecting naturally gluten-free foods like rice and quinoa. (Answer)</li>
-                                <li>d) Plan meals by selecting gluten-free grains like spelt and bulgur. (Incorrect)</li>
+                                <li>a)Yes, in cases of excessive bleeding that does not cease with direct pressure, employing a tourniquet could be an option to manage the bleeding risk. To use a tourniquet, position it below the bleeding site, ideally 2-3 inches below the wound but avoiding placement on joints like the shoulder or wrist. Ensure it is tightened until bleeding is significantly reduced and it is secured properly. Document the exact time of application as this timing is important for healthcare workers to understand how long it has been used. A tourniquet is meant for use in dire, life-endangering situations, and it is imperative to get professional medical aid as soon as achievable.</li>
+                                <li>b) Yes, when facing severe blood loss that cannot be controlled with direct pressure, using a tourniquet might be an effective method to slow down the bleeding. To deploy a tourniquet, place it below the site of the bleeding injury, ideally 2-3 inches away from the wound but not over a joint such as an ankle or wrist. Tighten the device so the bleeding slows significantly and make sure it is fastened securely. It is crucial to record the time the tourniquet was applied, as medical personnel need to be aware of the duration it has been applied. Only use a tourniquet in critical emergencies, and ensure to seek professional medical assistance without delay.</li>
+                                <li>c)Yes, in situations where there is major bleeding that does not stop despite applying direct pressure, applying a tourniquet might be considered a method to attempt controlling the bleeding. To use a tourniquet, place it directly on the site of the bleeding, ideally wrapping it tightly around the wound itself. Avoid placing it on joints such as the knee or elbow, and secure it firmly. Remember to note the exact time when the tourniquet was applied, as medical staff will need this information to assess the duration it has been in place. A tourniquet should only be employed in critical, life-threatening situations, and it is crucial to contact medical professionals immediately for further assistance.</li>
+                                <li class="correct">d) Yes, in situations where there is severe bleeding that does not stop with direct pressure, applying a tourniquet can be an effective method to control the bleeding. To use a tourniquet, place it above the site of the bleeding, ideally 2-3 inches above the wound but not on a joint like the knee or elbow. Tighten it until the bleeding stops and secure it in place. Note the time the tourniquet was applied, as it is important for medical personnel to know how long it has been in place. A tourniquet should only be used in life-threatening situations, and professional medical help should be sought as soon as possible.</li>
                             </ol>
+                            </div>
                         </div>
                         <!-- <div class="question-block hard">
                             <h5>Hard</h5>
@@ -255,9 +271,145 @@
                         </div> -->
                     </div>
 
-            
                     <!-- Add more fields as needed -->
+                      <!-- Field 1: Cooking -->
+                    <div class="field-card">
+                        <h4>Mental Health</h4>
+                        <div class="question-block original">
+                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
+                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
+                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
+                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
+                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
+                                <br>
+                                Which of the statements given above are correct?
+                            
+                            </p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
+                            <ol>
+                                <li>a) (1) and (2)</li>
+                                <li class="correct">b) (1), (2), (3) and (4)</li>
+                                <li>c) (1), (2) and (4)</li>
+                                <li>d) (2) only</li>
+                            </ol>
+                            </div>
+                        </div>
+                        <!-- <div class="question-block hard">
+                            <h5>Hard</h5>
+                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
+                            <ol>
+                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                            </ol>
+                        </div> -->
+                    </div>
+                     <!-- Field 1: Cooking -->
+                     <div class="field-card">
+                        <h4>Mental Health</h4>
+                        <div class="question-block original">
+                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
+                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
+                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
+                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
+                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
+                                <br>
+                                Which of the statements given above are correct?
+                            
+                            </p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
+                            <ol>
+                                <li>a) (1) and (2)</li>
+                                <li class="correct">b) (1), (2), (3) and (4)</li>
+                                <li>c) (1), (2) and (4)</li>
+                                <li>d) (2) only</li>
+                            </ol>
+                            </div>
+                        </div>
+                        <!-- <div class="question-block hard">
+                            <h5>Hard</h5>
+                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
+                            <ol>
+                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                            </ol>
+                        </div> -->
+                    </div>
+                     <!-- Field 1: Cooking -->
+                     <div class="field-card">
+                        <h4>Mental Health</h4>
+                        <div class="question-block original">
+                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
+                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
+                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
+                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
+                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
+                                <br>
+                                Which of the statements given above are correct?
+                            
+                            </p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
+                            <ol>
+                                <li>a) (1) and (2)</li>
+                                <li class="correct">b) (1), (2), (3) and (4)</li>
+                                <li>c) (1), (2) and (4)</li>
+                                <li>d) (2) only</li>
+                            </ol>
+                            </div>
+                        </div>
+                        <!-- <div class="question-block hard">
+                            <h5>Hard</h5>
+                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
+                            <ol>
+                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                            </ol>
+                        </div> -->
+                    </div>
+                     <!-- Field 1: Cooking -->
+                     <div class="field-card">
+                        <h4>Mental Health</h4>
+                        <div class="question-block original">
+                            <p><strong>Question:</strong>How can I manage anticipatory anxiety?<br>
+                                 (1) Participating in cognitive behavioral therapy and utilizing visualization techniques are useful strategies to manage anticipatory anxiety, offering long-term benefits.
+                                (2) Engaging in deep breathing exercises and regular yoga sessions can effectively manage anticipatory anxiety by promoting a sense of calm.
+                                (3) Developing a routine of physical exercise and adopting a balanced diet can help manage anticipatory anxiety by improving overall mental well-being.
+                                (4) Practicing mindfulness and relaxation techniques can help manage anticipatory anxiety.
+                                <br>
+                                Which of the statements given above are correct?
+                            
+                            </p>
+                            <button class="toggle-btn">Show Options</button>
+                            <div class="details hidden">
+                            <ol>
+                                <li>a) (1) and (2)</li>
+                                <li class="correct">b) (1), (2), (3) and (4)</li>
+                                <li>c) (1), (2) and (4)</li>
+                                <li>d) (2) only</li>
+                            </ol>
+                            </div>
+                        </div>
+                        <!-- <div class="question-block hard">
+                            <h5>Hard</h5>
+                            <p><strong>Question:</strong>At work, I can't concentrate and make careless mistakes, and I've lost interest in hobbies I used to enjoy; could stress be causing this, or might it be a sign of a mental health condition, and what strategies can help me improve my focus and motivation?</p>
+                            <ol>
+                                <li class="correct" >a)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to stress, but they may also indicate a mental health condition, such as depression or anxiety. Stress can often lead to cognitive issues and a lack of motivation, as it affects the brain's ability to function optimally. Similarly, depression and anxiety can manifest in similar ways, impacting mood and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a healthcare professional to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing mindfulness or meditation, ensuring adequate sleep, maintaining a balanced diet, exercising regularly, and possibly engaging in cognitive behavioral therapy (CBT). Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>b)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to physical exhaustion, but they may also indicate a dietary deficiency, such as low iron or vitamin D levels. Physical exhaustion can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, dietary deficiencies can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a nutritionist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing deep breathing exercises or yoga, ensuring adequate hydration, maintaining a varied diet, incorporating relaxation techniques regularly, and possibly engaging in nutritional therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>c)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to dehydration, but they may also indicate an endocrine disorder, such as hypothyroidism or diabetes. Dehydration can often lead to cognitive issues and a lack of motivation, as it affects the body's ability to function optimally. Similarly, endocrine disorders can manifest in similar ways, impacting energy levels and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with an endocrinologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing hydration habits or adjusting fluid intake, ensuring regular medical check-ups, maintaining a controlled diet, engaging in specific physical activities, and possibly considering hormonal therapy. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                                <li>D)The symptoms you are experiencingâ€”difficulty concentrating, making careless mistakes, and losing interest in hobbiesâ€”could indeed be related to environmental factors, but they may also indicate a neurological condition, such as ADHD or early-onset dementia. Environmental factors can often lead to cognitive issues and a lack of motivation, as they affect an individual's ability to function optimally. Similarly, neurological conditions can manifest in similar ways, impacting cognitive processes and reducing interest in activities once enjoyed. To address these concerns, it's important to first consult with a neurologist to accurately diagnose the underlying cause. Meanwhile, strategies to improve focus and motivation include practicing time management skills or organizational techniques, ensuring regular social interaction, maintaining a stimulating environment, engaging in brain training exercises, and possibly considering medication. Setting small, achievable goals and gradually reintroducing enjoyable activities can also help in regaining interest and motivation.</li>
+                            </ol>
+                        </div> -->
+                    </div>
                 </div>
+                
             </div>
             
 
@@ -314,6 +466,20 @@
                 document.getElementById(tabId).classList.add('active');
                 document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
             }
+
+            document.querySelectorAll('.toggle-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        const details = this.nextElementSibling;
+        if (details.classList.contains('hidden')) {
+            details.classList.remove('hidden');
+            this.textContent = 'Hide Options';
+        } else {
+            details.classList.add('hidden');
+            this.textContent = 'Show Options';
+        }
+    });
+});
+
         </script>
         
     </main>
