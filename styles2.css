@@ -1,124 +1,125 @@
+/* Reset and global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f4f6fa;
+}
 
-        /* Reset and global styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: #f4f6fa;
-        }
+/* Header Styles with Image */
+header {
+    background: linear-gradient(135deg, #6a1b9a, #64b5f6);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+ }
 
-        /* Header Styles with Image */
-        header {
-            background: linear-gradient(135deg, #6a1b9a, #64b5f6);
-            color: #ffffff;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
+ header::before {
+    content: '';
+    background:  no-repeat center;
+    background-size: cover;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
 
-        header::before {
-            content: '';
-            background: url('Images/Untitled_design_(5).png') no-repeat center;
-            background-size: cover;
-            opacity: 0.1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
 
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
+header p {
+    font-size: 1.6em;
+    margin: 20px 0;
+    color: #e1e8f0;
+    position: relative;
+    z-index: 2;
+}
 
-        header p {
-            font-size: 1.6em;
-            margin: 20px 0;
-            color: #e1e8f0;
-            position: relative;
-            z-index: 2;
-        }
+.header-buttons {
+    position: relative;
+    z-index: 2;
+}
 
-        .header-buttons {
-            position: relative;
-            z-index: 2;
-        }
+.header-buttons a {
+    display: inline-block;
+    margin: 15px 15px;
+    padding: 15px 25px;
+    background: #ffffff;
+    color: #6a1b9a;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
 
-        .header-buttons a {
-            display: inline-block;
-            margin: 15px 15px;
-            padding: 15px 25px;
-            background: #ffffff;
-            color: #6a1b9a;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
+.header-buttons a:hover {
+    background: #64b5f6;
+    color: #ffffff;
+    transform: scale(1.05);
+}
 
-        .header-buttons a:hover {
-            background: #64b5f6;
-            color: #ffffff;
-            transform: scale(1.05);
-        }
+.header-buttons a .fa {
+    margin-right: 10px;
+}
 
-        .header-buttons a .fa {
-            margin-right: 10px;
-        }
+ /* Main Content Styles */
+ .content {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9fafb;
+}
 
-        /* Main Content Styles */
-        .content {
-            padding: 60px 20px;
-            text-align: center;
-            background: #f9fafb;
-        }
+section {
+    margin-bottom: 50px;
+}
 
-        section {
-            margin-bottom: 50px;
-        }
+h2 {
+    color: #6a1b9a;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+}
 
-        h2 {
-            color: #6a1b9a;
-            font-size: 2.4em;
-            margin-bottom: 20px;
-        }
+p {
+    font-size: 1.3em;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
 
-        p {
-            font-size: 1.2em;
-            color: #4a4a4a;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: #64b5f6;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background: #64b5f6;
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
+.cta-button:hover {
+    background: #6a1b9a;
+    transform: scale(1.05);
+}
 
-        .cta-button:hover {
-            background: #6a1b9a;
-            transform: scale(1.05);
-        }
 
-        /* Updated feature-section styles */
+/* Updated feature-section styles */
+
 .feature-section {
     background: #f9f9fc;
     padding: 80px 20px;
@@ -141,90 +142,186 @@
     transform: translateX(-50%);
 }
 
-
-        .feature {
+.feature {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
 
-        .feature h3 {
-            font-size: 2.3em;
+.feature h3 {
+            font-size: 2.3em; /*motivation word */
             color: #6a1b9a;
             margin-bottom: 15px;
         }
 
-        .feature p {
-            font-size: 1.1em;
+.feature p {
+           font-size: 1.1em;  /* content of motivation */
             color: #4a4a4a;
             line-height: 1.5;
         }
 
-        /* Adding Images for Creative Feel */
-        .feature img {
-            max-width: 80%;
-            height: auto;
-            margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+
+/* methodology section */
+
+/* Adding Images for Creative Feel  ---> layter on -------------------- */  
+
+
+    .methodology-feature h3 {
+        font-size: 1.8em;
+        color: #6a1b9a;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    
+    .methodology-feature p {
+        font-size: 1em; /* size of tect inside p in motvation as well*/
+        color: #333; /* Matches text color across the site */
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .methodology-list {
+        list-style-type: disc; /* Adds simple bullets for a cleaner look */
+        padding-left: 20px;
+        margin: 0;
+    }
+    
+    .methodology-list li {
+        font-size: 1em;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    
+    .methodology-list li strong {
+        color: #6a1b9a;
+    }
+ 
+    #metho {
+        position: relative; /* Keeps floated content properly positioned */
+        background: #f9f9f9; /* Light background for readability */
+        padding: 20px; /* Adds space inside the container */
+        border-radius: 10px; /* Rounds the edges */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+        overflow: hidden; /* Ensures the container adjusts to its content */
+        border-left: 5px solid #6a1b9a; /* Adds a colored accent */
+    }
+    
+    
+    #metho img {
+        float: left; /* Floats the image to the left, allowing text to wrap */
+        max-width: 45%; /* Restricts image width to 30% of the container */
+        height: auto; /* Maintains aspect ratio */
+        margin: 0 20px 20px 0; /* Adds space to the right and bottom of the image */
+        border-radius: 12px; /* Adds rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds soft shadow */
+    }
+    
+  /* Paragraphs and lists wrapping around the image */
+#metho p, #metho ol {
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 15px; /* Adds spacing below paragraphs or list items */
+    clear: none; /* Prevents text from unnecessarily clearing the floated image */
+}
+
+    /* Ordered list */
+#metho ol {
+    padding-left: 30px; /* Indents the ordered list */
+    margin-top: 10px; /* Adds spacing above the list */
+}
+    
+    #metho ol li {
+        display: list-item; /* Ensures list items maintain their bullet/numbering */
+        margin-bottom: 10px; /* Adds spacing between list items */
+        line-height: 1.5; /* Improves readability */
+        position: relative; /* Enables custom bullet styling */
+
+    }
+
+    
+/* Nested lists */
+/* Nested lists */
+#metho ol ul {
+    background: #f9f1ff; /* Light purple highlight for nested lists */
+    padding: 15px; /* Adds more breathing space inside the highlighted area */
+    margin-top: 10px; /* Increases spacing above the nested list */
+    margin-left: 10px; /* Indents the nested list to distinguish it from the main list */
+    border-radius: 12px; /* Smoothens the corners further */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-left: 5px solid #d3bce8; /* Adds an accent-colored border for distinction */
+}
+
+/* Individual nested list items */
+#metho ol ul  {
+    margin-bottom: 8px; /* Increases spacing between items for readability */
+    padding-left: 25px; /* Indents nested items for better alignment */
+    position: relative; /* Enables custom bullet placement */
+    line-height: 1.6; /* Improves readability */
+    font-size: 0.95em; /* Slightly smaller font to visually separate nested lists */
+    color: #333; /* Standard dark text color for good contrast */
+}
+
+/* Custom icons for nested items */
+#metho ol ul li:before {
+    position: absolute;
+    left: 0; /* Aligns the icon with the padding */
+    top: 50%; /* Centers the icon vertically */
+    transform: translateY(-50%); /* Adjusts vertical alignment */
+    font-size: 1.1em; /* Makes the icon slightly larger */
+    color: #6a1b9a; /* Matches the section’s accent color */
+}
+
+
+
+/* Highlight the introductory paragraph */
+#metho p:first-of-type {
+    font-size: 1.1em; /* Slightly larger text */
+    line-height: 1.8; /* Improves readability */
+    background: #f0e8ff; /* Subtle purple background highlight */
+    padding: 10px; /* Adds padding around the text */
+    border-radius: 8px; /* Matches rounded design */
+    font-weight: 500; /* Makes it stand out */
+}
+
+
+/* Styling for emphasized paragraph */
+#metho p:last-of-type {
+    font-style: italic; /* Adds emphasis */
+    color: #555; /* Subtle gray color */
+    text-align: right; /* Aligns the closing statement */
+}
+
+ 
+
+    @media (max-width: 768px) {
+        #metho {
+            display: block; /* Stacks image and text vertically on smaller screens */
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #8e44ad;
-            color: #ffffff;
-            border-top: 5px solid #64b5f6;
+    
+        #metho img {
+            float: none; /* Removes float for smaller screens */
+            max-width: 100%; /* Makes the image take the full width of the container */
+            margin: 0 0 20px 0; /* Centers the image and adds spacing below */
         }
-        .methodology-feature {
-    text-align: left;
-    padding: 20px;
-     background: #e5eff2; /*Matches other sections' white background */
-    border-radius: 10px;
-    box-shadow: none; /* Removes shadow for seamless integration */
-    margin: 20px auto;
-    /* max-width: 800px; */
-    max-width: 100%;
+    
+        #metho p, #metho ol {
+            display: block; /* Makes text stack properly for smaller screens */
+            text-align: left; /* Aligns text to the left */
+        }
+    }
+    
+/* #motivtatio nav */
+
+#motivation {
+    position: relative; /* Keeps floated content properly positioned */
+    background: #f9f9f9; /* Light background for readability */
+    padding: 20px; /* Adds space inside the container */
+    border-radius: 10px; /* Rounds the edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    overflow: hidden; /* Ensures the container adjusts to its content */
+    border-left: 5px solid #6a1b9a; /* Adds a colored accent */
 }
 
-.methodology-feature h3 {
-    font-size: 1.8em;
-    color: #6a1b9a;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.methodology-feature p {
-    font-size: 1.2em;
-    color: #333; /* Matches text color across the site */
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.methodology-list {
-    list-style-type: disc; /* Adds simple bullets for a cleaner look */
-    padding-left: 20px;
-    margin: 0;
-}
-
-.methodology-list li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.methodology-list li strong {
-    color: #6a1b9a;
-}
-
-.methodology-feature img {
-    display: block;
-    margin: 20px auto 0;
-    max-width: 100%;
-    border-radius: 10px;
-}
 
 /* Highlight styles for important terms */
 .highlight {
@@ -271,41 +368,51 @@
     font-size: 1em;
     color: #64b5f6;
 }
+.list-title p {
+    font-size: 0.85em !important;
+}
+.list-item strong{
+    font-size: 0.9em;
+}
+
 
 p {
-    font-size: 1.4em;
+    font-size: 1em;
     color: #4a4a4a;
     line-height: 1.6;
 }
 
+
 .tabs {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
-    .tab-button {
-        font-size: 1em;
-        padding: 10px 20px;
-        border: none;
-        background: #6a1b9a;
-        color: white;
-        cursor: pointer;
-        margin-right: 10px;
-    }
+.tab-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    background: #6a1b9a;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
-    .tab-button.active {
-        background: #64b5f6;
-    }
+.tab-button.active {
+    background: #64b5f6;
+}
 
-    .tab-content {
-        display: none;
-    }
+.tab-content {
+    display: none;
+}
 
-    .tab-content.active {
-        display: block;
-    }
+.tab-content.active {
+    display: block;
+}
 
+
+/* # Examples */
 
 
 /* Field Card */
@@ -417,7 +524,7 @@ ol li.correct {
 ol li.correct::before {
     content: "✔"; /* Checkmark indicator */
     position: absolute;
-    left: -20px;
+    left: -15px;
     top: 0;
     font-size: 1em;
     color: #28a745;
@@ -425,71 +532,20 @@ ol li.correct::before {
 }
 
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 1200px) {
-    .field-card {
-        flex: 0 0 calc(33.33% - 20px); /* Adjust to 3 cards per row on medium screens */
-    }
+
+
+
+
+
+
+
+
+
+ /* Footer */
+ footer {
+    text-align: center;
+    padding: 40px;
+    background: #8e44ad;
+    color: #ffffff;
+    border-top: 5px solid #64b5f6;
 }
-
-@media (max-width: 768px) {
-    .field-card {
-        flex: 0 0 calc(50% - 20px); /* Adjust to 2 cards per row on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .field-card {
-        flex: 0 0 100%; /* Stack cards vertically on very small screens */
-    }
-}
-/* Question Block */
-.question-block {
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.question-block.original {
-    background: #f4f6fa;
-    border-left: 5px solid #6a1b9a;
-}
-
-.question-block.hard {
-    background: #fdecef;
-    border-left: 5px solid #e74c3c;
-}
-
-.question-block h5 {
-    font-size: 0.85em;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.question-block p {
-    margin: 0;
-    line-height: 1.2;
-}
-
-/* MCQ Styling */
-ol {
-    margin: 0;
-    padding-left: 20px;
-}
-
-ol li {
-    margin-bottom: 5px;
-    line-height: 1.2;
-    font-size: 0.75em;
-}
-        /* Responsive Fix for Small Screens */
-        @media (max-width: 768px) {
-            header {
-                padding: 80px 20px;
-            }
-
-            .feature-section {
-                padding: 50px 20px;
-            }
-        }
-
-
