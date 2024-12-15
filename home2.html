@@ -7,26 +7,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 
 </head>
 <body>
     <header>
         <h1>Mobi-Genesis</h1>
         <p>A Mobile Intelligence Massive Multitask Language Understanding Benchmark</p>
+    
+        <!-- Author Block -->
+        <div class="author-section" style="margin-bottom: 10px;">
+            <span style="color:#23061e; font-size: 13pt; font-family: Roboto, Helvetica, Arial, Helvetica Neue, sans-serif;">
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author1</a><sup>*</sup>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author2</a><sup>*</sup>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author3</a><sup>*</sup>&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author4</a>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author5</a>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author6</a>&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author7</a>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author8</a>,&nbsp;
+                </span>
+                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe; " target="_blank" href="">Author9</a>&nbsp;
+                </span>
+                <br>
+                <span class="author-block">
+                    <p class="contribution" style="margin: 5px 0; font-size: 11pt;color:#fefefe;"><sup>*</sup>Core Authors</p>
+                </span>
+    
+                <img src="images/vilab.PNG" width="19" height="15" style="vertical-align: middle; margin-right: 5px;">
+                <span class="author-block">
+                    <a style="text-decoration: none; color:#fefefe;" target="_blank" href="https://github.com/VILA-Lab">
+                        <b>VILA Lab</b>
+                    </a>
+                </span>, 
+                <img src="images/mbz.PNG" width="20" height="15" style="vertical-align: middle; margin-right: 5px;">
+                <span class="author-block">
+                    <a style="text-decoration: none; color:#fefefe;" target="_blank" href="https://mbzuai.ac.ae/">
+                        <b>Mohamed bin Zayed University of AI (MBZUAI)</b>
+                    </a>
+                </span>&nbsp;&nbsp;
+            </span>
+        </div>
+    
+        <!-- Header Buttons -->
         <div class="header-buttons">
-            <a href="#home"><i class="fa fa-home"></i>Home</a>
-            <a href="#leaderboard"><i class="fa fa-chart-bar"></i>Leaderboard</a>
+            <a href="#home"><i class="fa fa-home"></i> Home</a>
+            <a href="#leaderboard"><i class="fa fa-chart-bar"></i> Leaderboard</a>
             <a href="#" class="nav-link">
                 <img src="images/github-logo_icon-icons.com_73546.png" alt="GitHub Logo" class="logo-icon"> Github
-            </a>           
-             <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+            </a>
+            <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
         </div>
     </header>
+    
 
     <main class="content">
         <section id="intro">
             <h2>Welcome to Mobi-Genesis</h2>
-            <p>Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across 80 diverse fields such as Education, Healthcare, and Technology. Mobi-Genesis is redefining mobile intelligence benchmarks for a smarter future.</p>
+            <p>Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across 80 diverse fields such as Education, Healthcare, and Technology. Mobi-Genesis is redefining mobile intelligence benchmark for a smarter future.</p>
             <a href="#benchmark" class="cta-button">Explore Mobi-Genesis Benchmark</a>
         </section>
 
@@ -339,7 +393,7 @@
 
             <div class="feature">
                 <h3>Benchmark statistics</h3>
-                <p>Explore our comprehensive dataset covering 80 fields, from technical disciplines to creative domains. Gain insight into the diversity and depth of the data that drives our benchmarks.</p>
+                <p>Explore our comprehensive dataset covering 80 fields, from technical disciplines to creative domains. Gain insight into the diversity and depth of the data that drives our benchmark.</p>
                 <div class="methodology-feature" id="analysis">
                     <ul>
                         <li class="analysis-item">
@@ -364,7 +418,7 @@
 
             <div class="feature">
                 <h3>Our Methodology</h3>
-                <p>Our methodology reflects a rigorous and systematic approach, designed to ensure not only quality but also practicality for mobile-based applications. By leveraging detailed planning and execution strategies, we aim to provide benchmarks that resonate with real-world use cases. Every step has been  designed and reviewed to uphold the highest standards of relevance, reliability, and scalability.</p>
+                <p>Our methodology reflects a rigorous and systematic approach, designed to ensure not only quality but also practicality for mobile-based applications. By leveraging detailed planning and execution strategies, we aim to provide benchmark that resonate with real-world use cases. Every step has been  designed and reviewed to uphold the highest standards of relevance, reliability, and scalability.</p>
                 <div class="methodology-feature" id="metho">
                     <img src="Images/pipeline_simple.jpg" alt="Methodology Overview">
                     <p><strong>Our methodology is a detailed, multi-step process designed to ensure comprehensive and reliable benchmarks:</strong></p>
@@ -399,30 +453,6 @@
 
             
 
-        <script>
-            function showTab(tabId) {
-                const tabs = document.querySelectorAll('.tab-content');
-                const buttons = document.querySelectorAll('.tab-button');
-                tabs.forEach(tab => tab.classList.remove('active'));
-                buttons.forEach(button => button.classList.remove('active'));
-                document.getElementById(tabId).classList.add('active');
-                document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
-            }
-
-            document.querySelectorAll('.toggle-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        const details = this.nextElementSibling;
-        if (details.classList.contains('hidden')) {
-            details.classList.remove('hidden');
-            this.textContent = 'Hide Options';
-        } else {
-            details.classList.add('hidden');
-            this.textContent = 'Show Options';
-        }
-    });
-});
-
-        </script>
         
     </main>
 
