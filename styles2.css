@@ -647,7 +647,43 @@ ol li.correct::before {
 }
 
 
+/* Author Section Styling */
+.author-section {
+    font-size: 13pt;
+    color: #924684;
+    line-height: 1.5;
+}
 
+.author-block a {
+    text-decoration: none;
+    color: #924684;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.author-block a:hover {
+    color: #6a1b9a; /* Adds a hover effect */
+}
+
+.contribution {
+    font-size: 11pt;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Inline Images */
+.author-section img {
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 3px; /* Smoothens image edges */
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
 
 
