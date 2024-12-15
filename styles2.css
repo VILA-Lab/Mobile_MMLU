@@ -15,9 +15,10 @@ header {
     background: linear-gradient(135deg, #6a1b9a, #64b5f6);
     color: #ffffff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     position: relative;
  }
+
 
  header::before {
     content: '';
@@ -33,7 +34,7 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3.1em;
     margin: 0;
     font-weight: bold;
     position: relative;
@@ -41,7 +42,7 @@ header h1 {
 }
 
 header p {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin: 20px 0;
     color: #e1e8f0;
     position: relative;
@@ -53,7 +54,9 @@ header p {
     z-index: 2;
 }
 
+
 .header-buttons a {
+    font-size: 1em;
     display: inline-block;
     margin: 15px 15px;
     padding: 15px 25px;
@@ -94,6 +97,8 @@ section {
     margin-bottom: 50px;
 }
 
+
+
 h2 {
     color: #6a1b9a;
     font-size: 2.4em;
@@ -101,7 +106,7 @@ h2 {
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #4a4a4a;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -132,7 +137,7 @@ p {
     padding: 80px 20px;
     border-radius: 20px;
     margin: 40px auto;
-    max-width: 1200px;
+    max-width: 1400px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -268,6 +273,7 @@ p {
     color: #333; /* Standard dark text color for good contrast */
 }
 
+
 /* Custom icons for nested items */
 #metho ol ul li:before {
     position: absolute;
@@ -295,7 +301,7 @@ p {
 #metho p:last-of-type {
     font-style: italic; /* Adds emphasis */
     color: #555; /* Subtle gray color */
-    text-align: right; /* Aligns the closing statement */
+    text-align: center; /* Aligns the closing statement */
 }
 
  
@@ -521,12 +527,19 @@ ol li {
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
+    /* transition: background 0.3s, transform 0.3s; */
+    cursor: pointer;
+    position: relative;
+}
+.field-card  ol li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
     cursor: pointer;
     position: relative;
 }
-
-ol li:hover {
+.field-card ol li:hover {
     background: #f4f6fa;
     transform: scale(1.02);
 }
@@ -644,45 +657,6 @@ ol li.correct::before {
     .analysis-item {
         padding: 10px;
     }
-}
-
-
-/* Author Section Styling */
-.author-section {
-    font-size: 13pt;
-    color: #924684;
-    line-height: 1.5;
-}
-
-.author-block a {
-    text-decoration: none;
-    color: #924684;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.author-block a:hover {
-    color: #6a1b9a; /* Adds a hover effect */
-}
-
-.contribution {
-    font-size: 11pt;
-    color: #666;
-    margin: 5px 0;
-}
-
-/* Inline Images */
-.author-section img {
-    vertical-align: middle;
-    margin-right: 5px;
-    border-radius: 3px; /* Smoothens image edges */
-}
-
-/* Header Buttons */
-.header-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
 }
 
 
