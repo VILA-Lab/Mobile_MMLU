@@ -56,7 +56,7 @@ header p {
 
 
 .header-buttons a {
-    font-size: 1em;
+    font-size: 0.8em;
     display: inline-block;
     margin: 15px 15px;
     padding: 15px 25px;
@@ -101,12 +101,12 @@ section {
 
 h2 {
     color: #6a1b9a;
-    font-size: 2.4em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     color: #4a4a4a;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -137,7 +137,7 @@ p {
     padding: 80px 20px;
     border-radius: 20px;
     margin: 40px auto;
-    max-width: 1400px;
+    max-width: 1100px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -204,6 +204,10 @@ p {
         margin-bottom: 10px;
         line-height: 1.5;
     }
+    .methodology-list ol {
+        text-align: left;
+        
+    }
     
     .methodology-list li strong {
         color: #6a1b9a;
@@ -242,7 +246,7 @@ p {
     margin-top: 10px; /* Adds spacing above the list */
 }
     
-    #metho ol li {
+#metho ol li {
         display: list-item; /* Ensures list items maintain their bullet/numbering */
         margin-bottom: 10px; /* Adds spacing between list items */
         line-height: 1.5; /* Improves readability */
@@ -278,16 +282,21 @@ p {
 #metho ol ul li:before {
     position: absolute;
     left: 0; /* Aligns the icon with the padding */
-    top: 50%; /* Centers the icon vertically */
+    top: 20%; /* Centers the icon vertically */
     transform: translateY(-50%); /* Adjusts vertical alignment */
     font-size: 1.1em; /* Makes the icon slightly larger */
     color: #6a1b9a; /* Matches the section’s accent color */
 }
 
-
+/* Remove border from inner UL */
+#metho ol ul ul {
+    border-left: none; /* Removes the border */
+    background: none; /* Optional: remove background */
+    padding-left: 20px; /* Ensures proper indentation */}
 
 /* Highlight the introductory paragraph */
 #metho p:first-of-type {
+    margin: 0;
     font-size: 1.1em; /* Slightly larger text */
     line-height: 1.8; /* Improves readability */
     background: #f0e8ff; /* Subtle purple background highlight */
@@ -304,7 +313,15 @@ p {
     text-align: center; /* Aligns the closing statement */
 }
 
- 
+ /* Force text alignment to left for the parent and inner ULs */
+#metho ol, 
+#metho ol ul, 
+#metho ol ul li {
+    text-align: left; /* Ensure text is left-aligned */
+    margin: 0; /* Remove unnecessary margin */
+    padding-left: 20px; /* Optional: Add consistent left padding */
+}
+
 
     @media (max-width: 768px) {
         #metho {
