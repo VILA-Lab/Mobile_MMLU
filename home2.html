@@ -407,7 +407,7 @@
                         </li>
                         <li class="analysis-item">
                                 <p>
-                                    This figure compares the number of topics across score ranges (1-10) between our dataset (Genesis) and the MMLU dataset.</p>
+                                    This figure compares the number of topics across score ranges (1-10) between our dataset (Mobi-Genesis) and the MMLU dataset, highlighting each topic's suitability for mobile use cases.</p>
                                 <img style=" max-width: 85%;" src="Images/genesis_scores.png" alt="Relevance Score Comparison">
                                 <br>
                                 <img style=" max-width: 85%;" src="Images/mmlu_scores.png" alt="Relevance Score Comparison">
@@ -429,10 +429,10 @@
                     <p><strong>Our methodology is a detailed, multi-step process designed to ensure comprehensive and reliable benchmarks:</strong></p>
                     
                     <ol class="methodology-list" id="content-metho">
-                        <li><strong>Field Selection:</strong> We began by conducting an in-depth search to identify fields that people frequently need or use in daily life, work, shopping, gaming, travel, or other scenarios. These fields were designed to align with mobile searches and user queries. These fields gathered from diverse sources including Wikipedia, various websites, and large language models to ensure inclusivity and relevance.</li>
+                        <li><strong>Field Selection:</strong> We began by conducting an in-depth search to identify fields that people frequently need or use in daily life, work, shopping, gaming, travel, or other scenarios. These fields were designed to align with mobile searches and user queries. These fields were gathered from diverse sources including Wikipedia, various websites, and large language models to ensure inclusivity and relevance.</li>
                         <li><strong>Question Structuring and Human Annotation:</strong> 
                             <ul>
-                                <li>Questions were categorized into two types: standard questions and challenging scenario-based questions.</li>
+                                <li>The questions included standard questions to evaluate general knowledge and understanding, and challenging scenario-based questions crafted to simulate real-world situations and test critical thinking skills.</li>
                                 <li>The questions underwent multiple rounds of human annotation. This included generating the ground truth answers first and then creating multiple-choice questions (MCQs) based on the ground truth. The MCQs were crafted with the <span class="highlight">following principles</span>:
                                     <ul>
                                         <li>Options were highly similar to the ground truth, differing only in specific keywords or subtle details to make them incorrect.</li>
@@ -445,6 +445,7 @@
                         <li><strong>Quality Assurance:</strong> The generated questions were thoroughly reviewed for similarity and uniqueness. Any redundant or overly similar questions were removed. Additionally, each batch of questions underwent sampling and human verification to ensure accuracy and relevance.</li>
                         <li><strong>Evaluation on LLMs:</strong> The curated dataset was used to evaluate various large language models across different scales, focusing particularly on those optimized for mobile usage. Evaluation metrics included latency, accuracy, and energy efficiency to ensure the benchmarks were practical for mobile environments.</li>
                     </ol>
+                    
                     <p><em>This meticulous process ensures that our benchmarks are not only comprehensive but also reflective of real-world mobile usage scenarios.</em></p>
                 </div>
             </div>
