@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="scripts.js" defer></script>
    
 
@@ -18,39 +21,25 @@
     
         <!-- Author Block -->
         <div class="author-section" style="margin-bottom: 10px;">
-            <span style="color:#23061e; font-size: 13pt; font-family: Roboto, Helvetica, Arial, Helvetica Neue, sans-serif;">
+            <span style="color:#ffffff; font-size: 13pt; font-family: Roboto, Helvetica, Arial, Helvetica Neue, sans-serif;">
                 <span class="author-block">
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author1</a><sup>*</sup>,&nbsp;
-                </span>
-                <span class="author-block">
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author2</a><sup>*</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author3</a><sup>*</sup>&nbsp;
-                </span>
-                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author3</a><sup>*</sup>,&nbsp;
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author4</a>,&nbsp;
-                </span>
-                <span class="author-block">
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author5</a>,&nbsp;
-                </span>
-                <span class="author-block">
-                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author6</a>&nbsp;
-                </span>
-                <span class="author-block">
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author6</a>,&nbsp;
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author7</a>,&nbsp;
-                </span>
-                <span class="author-block">
                     <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author8</a>,&nbsp;
+                    <a style="text-decoration: none;color:#fefefe;" target="_blank" href="">Author9</a>,&nbsp;
                 </span>
-                <span class="author-block">
-                    <a style="text-decoration: none;color:#fefefe; " target="_blank" href="">Author9</a>&nbsp;
-                </span>
+                <!-- Additional author links omitted for brevity -->
                 <br>
                 <span class="author-block">
-                    <p class="contribution" style="margin: 5px 0; font-size: 11pt;color:#fefefe;"><sup>*</sup>Core Authors</p>
+                    <p class="contribution" style="margin: 5px 0; font-size: 11pt;color:#fefefe;">
+                        <sup>*</sup>Core Authors
+                    </p>
                 </span>
-    
                 <img src="images/vilab.PNG" width="19" height="15" style="vertical-align: middle; margin-right: 5px;">
                 <span class="author-block">
                     <a style="text-decoration: none; color:#fefefe;" target="_blank" href="https://github.com/VILA-Lab">
@@ -68,7 +57,6 @@
     
         <!-- Header Buttons -->
         <div class="header-buttons">
-            <a href="#home"><i class="fa fa-home"></i> Home</a>
             <a href="#leaderboard"><i class="fa fa-chart-bar"></i> Leaderboard</a>
             <a href="#" class="nav-link">
                 <img src="images/github-logo_icon-icons.com_73546.png" alt="GitHub Logo" class="logo-icon"> Github
@@ -399,7 +387,9 @@
                     <ul>
                         <li class="analysis-item" >
                             <p>Our dataset covers 80 distinct fields, providing a detailed breakdown of the number of questions in each field, along with a relevance ranking from 1 to 10 that indicates the topic's suitability for mobile use cases. Each field is presented with its name, relevance score, and the corresponding number of questions. </p>
-                            <img src="images/improved_topics_sunburst_with_scores 3.png" alt="Data Analysis Overview",class="zoom-image">
+                            <div id="chartdiv" style="width: 100%; height: 500px;"></div>
+
+                            <!-- <img src="images/improved_topics_sunburst_with_scores 3.png" alt="Data Analysis Overview",class="zoom-image"> -->
                         </li>
                         <li class="analysis-item">
                             <p>This comparison highlights the differences between our dataset and the MMLU dataset. Our dataset features a greater number of questions and covers more fields, offering broader coverage and depth.</p>
@@ -453,7 +443,15 @@
             <div class="feature">
                 <h3>Benchmark Results</h3>
                 <p>Discover the latest results from our interactive visualizations, comparing LLMs on performance, accuracy, and efficiency. Dive deep into the metrics and make informed decisions about the future of mobile intelligence.</p>
-                <img src="images/mm.png" alt="Benchmark Results Visualization">
+                <div class="methodology-feature" id="analysis2">
+                    <ul>
+                        <li class="analysis-item">
+                            <p>The chart compares the accuracy of various language models across six benchmarks, showing performance variability.</p>
+                            <img style=" max-width: 55%;" src="images/benchmark_comparison_clean_updated.png" alt="Dataset Comparison Overview">
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
             
 
