@@ -704,6 +704,17 @@ ol li.correct::before {
 
 /* zoom*/
 
+ .bordered-image {
+    max-width: 55%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #6a1b9a; /* Adds a purple border */
+    border-radius: 10px; /* Rounds the corners slightly */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
 
   
 
