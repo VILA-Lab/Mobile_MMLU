@@ -83,24 +83,24 @@ chart.seriesContainer.children.unshift(am5.Circle.new(root, {
     centerY: am5.p50,
     width: 75,
     height: 75,
-    // src: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
-    //   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    //     <circle cx="50" cy="50" r="45" fill="#6a1b9a" opacity="0.9"/>
-    //     <text x="50" y="40" 
-    //       font-size="16" 
-    //       text-anchor="middle" 
-    //       fill="white" 
-    //       font-family="Arial, sans-serif" 
-    //       font-weight="bold">Mobile</text>
-    //     <text x="50" y="65" 
-    //       font-size="24" 
-    //       text-anchor="middle" 
-    //       fill="white" 
-    //       font-family="Arial, sans-serif" 
-    //       font-weight="bold">MMLU</text>
-    //   </svg>
-    // `)
-    src:"images/mobile_mmlu_no_bg.png"
+    src: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" fill="#6a1b9a" opacity="0.9"/>
+        <text x="50" y="40" 
+          font-size="20" 
+          text-anchor="middle" 
+          fill="white" 
+          font-family="Arial, sans-serif" 
+          font-weight="bold">Mobile</text>
+        <text x="50" y="65" 
+          font-size="18" 
+          text-anchor="middle" 
+          fill="white" 
+          font-family="Arial, sans-serif" 
+          font-weight="bold">MMLU</text>
+      </svg>
+    `)
+    // src:"images/mobile_mmlu_no_bg.png"
   }));
 /////////////////////////////
 
@@ -143,17 +143,17 @@ iconData.forEach(function(item, index) {
     var y = centerY + (distance * Math.sin(angleRad));
 
     if (item.angle == 90 || item.angle == 270 ) {
-        distance = chartRadius*1.1;
+        distance = chartRadius*1.15;
         x = centerX + (distance * Math.cos(angleRad));
         y = centerY + (distance * Math.sin(angleRad));
     }
     if (item.angle == 315 || item.angle == 45) {
-        distance = chartRadius*1.05;
+        distance = chartRadius*1.15;
         x = centerX + (distance * Math.cos(angleRad));
         y = centerY + (distance * Math.sin(angleRad));
     }
     if (item.angle == 350) {
-        distance = chartRadius*1.03;
+        distance = chartRadius*1.13;
         x = centerX + (distance * Math.cos(angleRad));
         y = centerY + (distance * Math.sin(angleRad));
     }
