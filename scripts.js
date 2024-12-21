@@ -477,7 +477,6 @@ series2.data.setAll(outerData) // Outer Layer
 
 chart.children.unshift(
   am5.Label.new(root, {
-    text: "Distribution of topics",
     fontSize: 30,
     fontWeight: "bold",
     centerX: am5.percent(0),
