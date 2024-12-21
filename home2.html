@@ -417,7 +417,7 @@
                 <h3>Our Methodology</h3>
                 <p>Our methodology reflects a rigorous and systematic approach, designed to ensure not only quality but also practicality for mobile-based applications. By leveraging detailed planning and execution strategies, we aim to provide benchmark that resonate with real-world use cases. Every step has been  designed and reviewed to uphold the highest standards of relevance, reliability, and scalability.</p>
                 <div class="methodology-feature" id="metho">
-                    <img src="images/pipeline_simple.jpg" alt="Methodology Overview">
+                    <img src="images/pipeline_simple (3).png" alt="Methodology Overview">
                     <p><strong>Our methodology is a detailed, multi-step process designed to ensure comprehensive and reliable benchmarks:</strong></p>
                     
                     <ol class="methodology-list" id="content-metho">
@@ -446,10 +446,13 @@
                 <h3>Benchmark Results</h3>
                 <p>Discover the latest results from our interactive visualizations, comparing LLMs on performance, accuracy, and efficiency. Dive deep into the metrics and make informed decisions about the future of mobile intelligence.</p>
                 <div class="methodology-feature" id="analysis2">
-                    <ul>
-                        <li class="analysis-item">
-                            <p>The chart compares the accuracy of various language models across six benchmarks, showing performance variability.</p>
-                            <img style=" max-width: 55%;" src="images/benchmark_comparison_clean_updated.png" alt="Dataset Comparison Overview">
+                   <ul>
+                        <li class="analysis-item" id="result">
+                            <p> 
+                                From the results we can see interesting observations. Firstly, it is higher variance in performance across models on the Mobile-MMLU benchmark compared to MMLU and MMLU-Pro. This increased variance is particularly valuable as it allows for a clearer distinction between model capabilities, especially for smaller-scale models (1-3B parameters), which are the primary focus of this benchmark. For example, Qwen2.5-3B, Phi-3.5-mini, and Llama-3.2-3B, all roughly same size, exhibit significant differences in their results.
+                                 
+                                Another notable point is that strong performance on MMLU or MMLU-Pro does not guarantee comparable results on Mobile-MMLU. For instance, the Phi-3.5-mini model performs impressively on MMLU and MMLU-Pro but falls short on Mobile-MMLU. Conversely, the Qwen2.5-3B model exhibits relatively modest results on MMLU and MMLU-Pro but excels on Mobile-MMLU, even surpassing some of the 8B models in this benchmark.</p>
+                            <img class="bordered-image" style=" max-width: 55%;" src="becnhmarks_results.jpg" alt="Dataset Comparison Overview">
                         </li>
                     </ul>
                 </div>
