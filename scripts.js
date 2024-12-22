@@ -619,3 +619,52 @@ series0.appear(1000, 100);
 series1.appear(1000, 100);
 series2.appear(1000, 100);
 
+// Add this to your existing scripts.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Create modal elements
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay';
+    
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+    
+    const modalImage = document.createElement('img');
+    const closeButton = document.createElement('button');
+    closeButton.className = 'modal-close';
+    closeButton.innerHTML = '×';
+    
+    modalContent.appendChild(modalImage);
+    modalContent.appendChild(closeButton);
+    modalOverlay.appendChild(modalContent);
+    document.body.appendChild(modalOverlay);
+
+    // Add click handlers to all expandable images
+    const images = document.querySelectorAll('.expandable-image');
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modalImage.src = this.src;
+            modalOverlay.classList.add('active');
+        });
+    });
+
+    // Close modal when clicking the close button or outside the image
+    closeButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        modalOverlay.classList.remove('active');
+    });
+
+    modalOverlay.addEventListener('click', function() {
+        modalOverlay.classList.remove('active');
+    });
+
+    modalContent.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Close modal with escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            modalOverlay.classList.remove('active');
+        }
+    });
+});

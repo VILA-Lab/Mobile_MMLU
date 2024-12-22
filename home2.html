@@ -382,6 +382,7 @@
                         </div> -->
                     </div>
                     <!-- Field 1: Cooking -->
+                
                     <div class="field-card">
                         <h4>Mental Health</h4>
                         <div class="question-block original">
@@ -493,23 +494,1293 @@
                 <p>Explore our comprehensive dataset covering 80 fields, from technical disciplines to creative domains. Gain insight into the diversity and depth of the data that drives our benchmark.</p>
                 <div class="methodology-feature" id="analysis">
                     <ul>
-                        <li class="analysis-item" >
-                            <p>Our dataset covers 80 distinct fields, providing a detailed breakdown of the number of questions in each field, along with a relevance ranking from 1 to 10 that indicates the topic's suitability for mobile use cases. Each field is presented with its name, relevance score, and the corresponding number of questions. </p>
-                            <div id="chartdiv" style="width: 100%; height: 800px; align-items: center; align-self: center;"></div>
-
-                            <!-- <img src="images/improved_topics_sunburst_with_scores 3.png" alt="Data Analysis Overview",class="zoom-image"> -->
-                        </li>
-                        <li class="analysis-item">
-                                <p>
-                                    The figures highlight the fields with the highest number of questions in each dataset Mobile-MMLU and MMLU.
-                                </p>
-                                <img style=" max-width: 85%;" src="images/benchmark_questions_top36.png" alt="Relevance Score Comparison">
-                                <br>
-                                <img style=" max-width: 85%;" src="images/mmlu_questions_top36.png" alt="Relevance Score Comparison">
-
+                        <div class="analysis-section">
+                            <h4>1. Dataset Coverage and Structure</h4>
+                            <ul class="analysis-list">
+                                <li class="analysis-item">
+                                    <p>Our dataset covers 80 distinct fields, providing a detailed breakdown of the number of questions in each field, along with a relevance ranking from 1 to 10 that indicates the topic's suitability for mobile use cases. Each field is presented with its name, relevance score, and the corresponding number of questions.</p>
+                                    <div id="chartdiv" style="width: 100%; height: 800px; align-items: center; align-self: center;"></div>
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <!-- Section 2: Topic Distribution -->
+                        <div class="analysis-section">
+                            <h4>2. Topic Distribution Analysis</h4>
+                            <ul class="analysis-list">
+                                <li class="analysis-item">
+                                    <p>This visualization demonstrates the topic distribution across MMLU, Mobile-MMLU, and MMLU-Pro benchmarks. From the scatter plot, we can observe that Mobile-MMLU topics occupy a distinct semantic space compared to the topics of MMLU and MMLU-Pro benchmark. This clear separation in the topic distribution highlights Mobile-MMLU's unique focus on practical, mobile-relevant scenarios, complementing existing benchmarks rather than overlapping with them. The distinct clustering pattern validates Mobile-MMLU's contribution as a specialized benchmark tailored for evaluating mobile-oriented language models.</p>
+                                    <img style="max-width: 95%;" src="images/analysis/topic_distribution_pca_updated_v7.png" alt="Topic Semantic Space Distribution" class="expandable-image">
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <!-- Section 3: Comparative Analysis -->
+                        <div class="analysis-section">
+                            <h4>3. Comparative Dataset Analysis</h4>
+                            <ul class="analysis-list">
+                                <li class="analysis-item">
+                                    <p>This comparison highlights the differences between the basic statistics of Mobile-MMLU from MMLU and MMLU-Pro benchmark. Our benchmark features a greater number of questions, topics and and are more diverse, offering broader coverage and depth.</p>
+                                    <div class="image-comparison-container">
+                                        <div class="image-comparison-item">
+                                            <img src="images/analysis/total_questions.png" alt="Total Questions Analysis" class="expandable-image">
+                                            <div class="caption">Total Questions Distribution</div>
+                                        </div>
+                                        <div class="image-comparison-item">
+                                            <img src="images/analysis/total_topics.png" alt="Total Topics Analysis" class="expandable-image">
+                                            <div class="caption">Total Topics Distribution</div>
+                                        </div>
+                                    </div>
+                                </li>
+                
+                                <!-- Distribution Plots Gallery -->
+                                <li class="analysis-item">
+                                    <p>The figures below provide a comprehensive visualization of the dataset characteristics. For Mobile-MMLU and MMLU, we showcase the top 40 categories by both question count and word distribution, highlighting the depth and breadth of coverage in each domain. For MMLU-Pro, which focuses on specialized professional knowledge, we present the top 14 categories. These distributions reveal distinct patterns: Mobile-MMLU demonstrates a balanced distribution across practical, everyday topics, MMLU shows concentration in academic and professional fields, while MMLU-Pro exhibits focused coverage of specialized professional domains.</p>
+                                    <div class="images-scroll-container">
+                                        <div class="image-gallery">
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mobile_mmlu_questions_top40.png" alt="Mobile MMLU Questions" class="expandable-image">
+                                                <figcaption>Mobile MMLU Questions Distribution</figcaption>
+                                            </figure>
+                                            
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mobile_mmlu_words_top40.png" alt="Mobile MMLU Words" class="expandable-image">
+                                                <figcaption>Mobile MMLU Word Distribution</figcaption>
+                                            </figure>
+                                            
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mmlu_questions_top40.png" alt="MMLU Questions" class="expandable-image">
+                                                <figcaption>MMLU Questions Distribution</figcaption>
+                                            </figure>
+                                            
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mmlu_words_top40.png" alt="MMLU Words" class="expandable-image">
+                                                <figcaption>MMLU Word Distribution</figcaption>
+                                            </figure>
+                                            
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mmlu_pro_questions_top14.png" alt="MMLU Pro Questions" class="expandable-image">
+                                                <figcaption>MMLU Pro Questions Distribution</figcaption>
+                                            </figure>
+                                            
+                                            <figure class="image-item">
+                                                <img src="images/analysis/mmlu_pro_words_top14.png" alt="MMLU Pro Words" class="expandable-image">
+                                                <figcaption>MMLU Pro Word Distribution</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+<!-- ------------------------------------------------------------- DATASET STATS TABLE BEGIN --------------------------------------------->
+                        <div class="analysis-section">
+                        <h4>4. Dataset Categories and Question Distribution</h4>
+                        <ul class="analysis-list">
+                            <li class="analysis-item">
+                                <p>The following tables present a comprehensive statistical breakdown comparing Mobile-MMLU with MMLU and MMLU-Pro benchmarks. Each dataset table showcases its unique hierarchical structure - from broad categories to specific topics - along with detailed question counts. Mobile-MMLU offers extensive coverage with 80 fields and 16,186 questions, emphasizing practical, everyday knowledge areas. In contrast, MMLU contains 57 subjects with 15,573 questions focusing on academic disciplines, while MMLU-Pro features 14 specialized professional fields with 12,102 questions. This side-by-side comparison highlights how Mobile-MMLU complements existing benchmarks by introducing new categories specifically relevant to mobile use cases, while maintaining comprehensive coverage in terms of both breadth and depth.</p>                                <!-- Add table here -->
+                                <div class="scrollable-stats">
+                                    <!-- Your generated table HTML goes here -->
+                                    <div class="stats-container">
+                                        <div class="stats-header">
+                                            <h3>Dataset Categories and Question Distribution</h3>
+                                        </div>
+                                        
+                                        <div class="dataset-columns">
+                                            <!-- Mobile-MMLU Column -->
+                                            <div class="dataset-card">
+                                                <div class="dataset-title">Mobile-MMLU</div>
+                                                <div class="total-count">Total Questions: 16,186</div>
+                                                
+                                                <div class="category-section">
+                                                    <div class="category-header">Daily Life Skills</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Basic Life Skills</span>
+                                                        <span class="count">209</span>
+                                                    </div>
+                                                
                                 
-                                <!-- <img src="images/topics_by_score_range.png" alt="Dataset Comparison Overview"> -->
+                                                    <div class="subcategory-item">
+                                                        <span>Time Management</span>
+                                                        <span class="count">211</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Conflict Resolution</span>
+                                                        <span class="count">152</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Event Planning</span>
+                                                        <span class="count">201</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Food and Cooking</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Cooking And Recipes</span>
+                                                        <span class="count">274</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Food Safety</span>
+                                                        <span class="count">219</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Nutrition And Diet</span>
+                                                        <span class="count">151</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Digital Literacy</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Digital Literacy</span>
+                                                        <span class="count">198</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Technical Help</span>
+                                                        <span class="count">254</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Mobile Customization</span>
+                                                        <span class="count">230</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Social Media</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Social Media</span>
+                                                        <span class="count">217</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Digital Detox</span>
+                                                        <span class="count">196</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Privacy and Security</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Cybersecurity</span>
+                                                        <span class="count">208</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Online Privacy</span>
+                                                        <span class="count">219</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Health and Wellness</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Mental Health</span>
+                                                        <span class="count">130</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Physical Fitness</span>
+                                                        <span class="count">190</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Medical And Health Knowledge</span>
+                                                        <span class="count">183</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Ergonomics</span>
+                                                        <span class="count">204</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Personal Growth</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Creativity</span>
+                                                        <span class="count">210</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Emotional Intelligence</span>
+                                                        <span class="count">133</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Personal Branding</span>
+                                                        <span class="count">186</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Career Development</span>
+                                                        <span class="count">166</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Home and Living</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Home Safety</span>
+                                                        <span class="count">189</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Pet Care</span>
+                                                        <span class="count">208</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Waste Management</span>
+                                                        <span class="count">207</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Home Maintenance</span>
+                                                        <span class="count">261</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Communication</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Communication Skills</span>
+                                                        <span class="count">134</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Social Etiquette</span>
+                                                        <span class="count">200</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Public Speaking</span>
+                                                        <span class="count">158</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Education</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Education Techniques</span>
+                                                        <span class="count">146</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Reading And Literature</span>
+                                                        <span class="count">248</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Writing Skills</span>
+                                                        <span class="count">203</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Linguistics</span>
+                                                        <span class="count">223</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Personal Business</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Personal Finance</span>
+                                                        <span class="count">223</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>E Commerce</span>
+                                                        <span class="count">186</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Shopping</span>
+                                                        <span class="count">241</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Accounting</span>
+                                                        <span class="count">205</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Business Studies</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Project Management</span>
+                                                        <span class="count">176</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Human Resources</span>
+                                                        <span class="count">144</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Business Management</span>
+                                                        <span class="count">167</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Marketing  And Sales Strarigies</span>
+                                                        <span class="count">162</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Entertainment</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Entertainment</span>
+                                                        <span class="count">207</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Movie And Tv Show</span>
+                                                        <span class="count">230</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Podcasting</span>
+                                                        <span class="count">211</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Hobbies</span>
+                                                        <span class="count">208</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Photography Basics</span>
+                                                        <span class="count">214</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Everyday Safety</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>First Aid</span>
+                                                        <span class="count">221</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Outdoor Survival Skills</span>
+                                                        <span class="count">277</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Automotive Care</span>
+                                                        <span class="count">275</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Family</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Parenting</span>
+                                                        <span class="count">144</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Relationships</span>
+                                                        <span class="count">173</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Teens And Youth</span>
+                                                        <span class="count">161</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Lifestyle</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Fashion And Style</span>
+                                                        <span class="count">200</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Travel Planning</span>
+                                                        <span class="count">214</span>
+                                                    </div>
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Sports</span>
+                                                        <span class="count">188</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Gardening And Horticulture</span>
+                                                        <span class="count">212</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Environmental</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Sustainable Living</span>
+                                                        <span class="count">178</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Legal</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Legal Rights</span>
+                                                        <span class="count">219</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Law</span>
+                                                        <span class="count">206</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Ethics</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Ethical Living</span>
+                                                        <span class="count">171</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Ethics</span>
+                                                        <span class="count">172</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Arts and Design</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Art Techniques And Architecture</span>
+                                                        <span class="count">175</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Interior Design</span>
+                                                        <span class="count">200</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Weather</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Weather Forecasting</span>
+                                                        <span class="count">205</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Culture and Religion</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Cultural Awareness</span>
+                                                        <span class="count">243</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Religious Studies</span>
+                                                        <span class="count">215</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Holidays And Traditions</span>
+                                                        <span class="count">236</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Critical Thinking</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Formal Logic</span>
+                                                        <span class="count">210</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Logical Fallacies</span>
+                                                        <span class="count">293</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Basic Mathematics</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Elementary Mathematics</span>
+                                                        <span class="count">254</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Mathematics</span>
+                                                        <span class="count">200</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Basic Statistics</span>
+                                                        <span class="count">219</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Basic Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Conceptual Physics</span>
+                                                        <span class="count">194</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Science Fundamentals</span>
+                                                        <span class="count">191</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Social Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Social Sciences</span>
+                                                        <span class="count">207</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Political Systems</span>
+                                                        <span class="count">193</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>World History</span>
+                                                        <span class="count">206</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Geography</span>
+                                                        <span class="count">211</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Miscellaneous</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Global Facts</span>
+                                                        <span class="count">228</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>News And Information</span>
+                                                        <span class="count">203</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                
+                                            <!-- MMLU Column -->
+                                            <div class="dataset-card">
+                                                <div class="dataset-title">MMLU</div>
+                                                <div class="total-count">Total Questions: 15,573</div>
+                                                
+                                                <div class="category-section">
+                                                    <div class="category-header">Basic Mathematics</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Elementary Mathematics</span>
+                                                        <span class="count">419</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Mathematics</span>
+                                                        <span class="count">299</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Statistics</span>
+                                                        <span class="count">239</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Basic Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>High School Physics</span>
+                                                        <span class="count">168</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Conceptual Physics</span>
+                                                        <span class="count">261</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Chemistry</span>
+                                                        <span class="count">225</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Biology</span>
+                                                        <span class="count">342</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Advanced Mathematics</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Abstract Algebra</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>College Mathematics</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Advanced Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>College Physics</span>
+                                                        <span class="count">113</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>College Chemistry</span>
+                                                        <span class="count">108</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Astronomy</span>
+                                                        <span class="count">168</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>College Biology</span>
+                                                        <span class="count">160</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Medical Genetics</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Virology</span>
+                                                        <span class="count">184</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Computer Science</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>College Computer Science</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Computer Science</span>
+                                                        <span class="count">109</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Machine Learning</span>
+                                                        <span class="count">123</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Security and Privacy</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Computer Security</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Security Studies</span>
+                                                        <span class="count">272</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Engineering</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Electrical Engineering</span>
+                                                        <span class="count">161</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Food and Cooking</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Nutrition</span>
+                                                        <span class="count">339</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Religion and Culture</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>World Religions</span>
+                                                        <span class="count">190</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Medical Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Clinical Knowledge</span>
+                                                        <span class="count">294</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>College Medicine</span>
+                                                        <span class="count">195</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Professional Medicine</span>
+                                                        <span class="count">303</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Human Aging</span>
+                                                        <span class="count">246</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Human Sexuality</span>
+                                                        <span class="count">143</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Anatomy</span>
+                                                        <span class="count">149</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Personal Business</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Management</span>
+                                                        <span class="count">114</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Marketing</span>
+                                                        <span class="count">259</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Business Studies</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Professional Accounting</span>
+                                                        <span class="count">313</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Econometrics</span>
+                                                        <span class="count">126</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Business Ethics</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Macroeconomics</span>
+                                                        <span class="count">433</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Microeconomics</span>
+                                                        <span class="count">264</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Morality</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Moral Disputes</span>
+                                                        <span class="count">384</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Moral Scenarios</span>
+                                                        <span class="count">995</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Professional Law</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Professional Law</span>
+                                                        <span class="count">1704</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>International Law</span>
+                                                        <span class="count">134</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Jurisprudence</span>
+                                                        <span class="count">119</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Psychology</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>High School Psychology</span>
+                                                        <span class="count">605</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Professional Psychology</span>
+                                                        <span class="count">681</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Social Sciences</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Sociology</span>
+                                                        <span class="count">223</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Philosophy</span>
+                                                        <span class="count">345</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Geography</span>
+                                                        <span class="count">220</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Government And Politics</span>
+                                                        <span class="count">214</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Public Relations</span>
+                                                        <span class="count">122</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Us Foreign Policy</span>
+                                                        <span class="count">111</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">History</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>High School European History</span>
+                                                        <span class="count">183</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School Us History</span>
+                                                        <span class="count">226</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>High School World History</span>
+                                                        <span class="count">263</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Prehistory</span>
+                                                        <span class="count">359</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">Critical Thinking</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Formal Logic</span>
+                                                        <span class="count">140</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Logical Fallacies</span>
+                                                        <span class="count">181</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="category-section">
+                                                    <div class="category-header">miscellaneous</div>
+                                                    <div class="subcategory-list">
+                                                        
+                                                    <div class="subcategory-item">
+                                                        <span>Global Facts</span>
+                                                        <span class="count">110</span>
+                                                    </div>
+                                                
+                                
+                                                    <div class="subcategory-item">
+                                                        <span>Miscellaneous</span>
+                                                        <span class="count">869</span>
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                
+                                            <!-- MMLU-Pro Column -->
+                                            <div class="dataset-card">
+                                                <div class="dataset-title">MMLU-Pro</div>
+                                                <div class="total-count">Total Questions: 12,102</div>
+                                                
+                                            <div class="pro-subject">
+                                                <span>Math</span>
+                                                <span class="count">1,356</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Physics</span>
+                                                <span class="count">1,304</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Chemistry</span>
+                                                <span class="count">1,137</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Law</span>
+                                                <span class="count">1,106</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Engineering</span>
+                                                <span class="count">974</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Other</span>
+                                                <span class="count">929</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Economics</span>
+                                                <span class="count">849</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Health</span>
+                                                <span class="count">823</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Psychology</span>
+                                                <span class="count">803</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Business</span>
+                                                <span class="count">794</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Biology</span>
+                                                <span class="count">722</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Philosophy</span>
+                                                <span class="count">504</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>Computer Science</span>
+                                                <span class="count">415</span>
+                                            </div>
+                                        
+                                            <div class="pro-subject">
+                                                <span>History</span>
+                                                <span class="count">386</span>
+                                            </div>
+                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
+                        </ul>
+                    </div>
+<!-- ------------------------------------------------------------- DATASET STATS TABLE END --------------------------------------------->
+
                     </ul>
                 </div>
                 
