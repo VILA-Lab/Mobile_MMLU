@@ -229,7 +229,7 @@ p {
     
     #metho img {
         float: left; /* Floats the image to the left, allowing text to wrap */
-        max-width: 45%; /* Restricts image width to 30% of the container */
+        max-width: 60%; /* Restricts image width to 30% of the container */
         height: auto; /* Maintains aspect ratio */
         margin: 0 20px 20px 0; /* Adds space to the right and bottom of the image */
         border-radius: 12px; /* Adds rounded corners */
