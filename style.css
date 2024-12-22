@@ -512,12 +512,47 @@ p {
 }
 
 /* Question Block Styling */
-.question-block {
+/* .question-block {
     background: #ffffff;
     border-radius: 8px;
     padding: 10px;
     border-left: 5px solid #4499df;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+} */
+
+/* Make only the question content scrollable */
+.question-block {
+    max-height: 200px; /* Adjust this value as needed */
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: #6a1b9a rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling for Chrome/Safari/Edge */
+.question-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.question-block::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.question-block::-webkit-scrollbar-thumb {
+    background-color: #6a1b9a;
+    border-radius: 4px;
+}
+
+/* Keep the toggle button visible at the bottom */
+.question-block .toggle-btn {
+    position: sticky;
+    bottom: 0;
+    background: #013ea9;
+    padding: 8px 15px;
+    margin: 5px 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .question-block.hard {
@@ -693,14 +728,48 @@ ol li.correct::before {
         max-width: 100%; /* Full width for smaller screens */
     }
 
-    .analysis-item {
+    /* .analysis-item {
         padding: 10px;
+    } */
+
+    .analysis-item {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 }
 
 #chartdiv {
     margin-top: 20px;
   }
+
+
+/* ************************************ Analysis Updated */
+.analysis-section {
+    margin-bottom: 40px;
+}
+
+.analysis-section h4 {
+    color: #6a1b9a;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative;
+}
+
+.analysis-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #6a1b9a;
+}
+
 
 /* zoom*/
 
@@ -725,10 +794,284 @@ ol li.correct::before {
     overflow: visible;
 }
 
+/* Modal styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 90vh;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.modal-close:hover {
+    color: #64b5f6;
+}
+
+/* Add this class to images you want to be clickable */
+.expandable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.expandable-image:hover {
+    transform: scale(1.02);
+}
 
 
-  
+/* ********************************  TABLE  ************************************ */
+/* Main scrollable container - MOST IMPORTANT FOR SCROLLING */
+.scrollable-stats {
+    max-height: 600px;  /* Reduced from 800px */
+    height: 600px;      /* Added fixed height */
+    overflow-y: auto;
+    margin: 20px 0;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
 
+/* Container should fit inside the scroll area */
+.stats-container {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 0;         /* Changed from 20px 0 */
+}
+
+/* Keep headers visible while scrolling */
+.dataset-title {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #6a1b9a;
+}
+
+/* Make sure the cards don't expand too much */
+.dataset-card {
+    background: #f8f9fc;
+    border-radius: 8px;
+    padding: 15px;
+    height: fit-content;
+}
+
+/* Adjust the column layout */
+.dataset-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    height: fit-content;
+}
+
+/* Individual dataset card */
+.dataset-card {
+    background: #f8f9fc;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.dataset-title {
+    background: #6a1b9a;
+    color: white;
+    padding: 12px;
+    margin: -15px -15px 15px -15px;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Total count display */
+.total-count {
+    text-align: center;
+    font-size: 1.1em;
+    color: #6a1b9a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Category sections */
+.category-section {
+    margin-bottom: 15px;
+}
+
+.category-header {
+    background: #f0f2f5;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #444;
+    font-size: 0.9em;
+}
+
+/* Subcategory styling */
+.subcategory-list {
+    margin-left: 10px;
+    font-size: 0.85em;
+}
+
+.subcategory-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    color: #555;
+}
+
+.subcategory-item:hover {
+    background: rgba(106, 27, 154, 0.05);
+}
+
+.count {
+    color: #6a1b9a;
+    font-weight: 500;
+}
+
+/* MMLU-Pro specific styling */
+.pro-subject {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background: #f0f2f5;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.pro-subject:hover {
+    background: rgba(106, 27, 154, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .dataset-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dataset-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .scrollable-stats {
+        max-height: 200px;
+    }
+    
+    .dataset-card {
+        font-size: 0.9em;
+    }
+}
+
+/* ******************************************************************** */
+/* Image scrollable */
+.images-scroll-container {
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f8f9fc;
+    /* Scrollbar styling for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #6a1b9a rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling for Chrome/Safari/Edge */
+.images-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.images-scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.images-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #6a1b9a;
+    border-radius: 4px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.image-item {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.image-item img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.02);
+}
+
+.image-item figcaption {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .images-scroll-container {
+        max-height: 500px;
+    }
+    
+    .image-item img {
+        max-width: 95%;
+    }
+}
+/* ******************************************************************** */
  /* Footer */
  footer {
     text-align: center;
@@ -736,4 +1079,48 @@ ol li.correct::before {
     background: #8e44ad;
     color: #ffffff;
     border-top: 5px solid #64b5f6;
+}
+
+/* **************************** IMAGE Comparison */
+
+.image-comparison-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.image-comparison-item {
+    flex: 1;
+    text-align: center;
+}
+
+.image-comparison-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-comparison-item img:hover {
+    transform: scale(1.05);
+}
+
+.image-comparison-item .caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .image-comparison-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-comparison-item {
+        width: 100%;
+    }
 }
