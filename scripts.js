@@ -8,15 +8,26 @@ function showTab(tabId) {
 }
 
 document.querySelectorAll('.toggle-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        const details = this.nextElementSibling;
-        if (details.classList.contains('hidden')) {
-            details.classList.remove('hidden');
-            this.textContent = 'Hide Options';
-        } else {
-            details.classList.add('hidden');
-            this.textContent = 'Show Options';
-        }});
+  btn.addEventListener('click', function () {
+      // Find the nearest details element within the same question-block
+      const details = this.closest('.question-block').querySelector('.details');
+      if (details.classList.contains('hidden')) {
+          details.classList.remove('hidden');
+          this.textContent = 'Hide Options';
+          
+          // Add a small delay to ensure the content is rendered before scrolling
+          setTimeout(() => {
+              details.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'nearest',
+                  inline: 'start'
+              });
+          }, 100);
+      } else {
+          details.classList.add('hidden');
+          this.textContent = 'Show Options';
+      }
+  });
 });
 
 
