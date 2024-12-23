@@ -1831,12 +1831,40 @@
                                 From the results we can see interesting observations. Firstly, it is higher variance in performance across models on the Mobile-MMLU benchmark compared to MMLU and MMLU-Pro. This increased variance is particularly valuable as it allows for a clearer distinction between model capabilities, especially for smaller-scale models (1-3B parameters), which are the primary focus of this benchmark. For example, Qwen2.5-3B, Phi-3.5-mini, and Llama-3.2-3B, all roughly same size, exhibit significant differences in their results.
                                  
                                 Another notable point is that strong performance on MMLU or MMLU-Pro does not guarantee comparable results on Mobile-MMLU. For instance, the Phi-3.5-mini model performs impressively on MMLU and MMLU-Pro but falls short on Mobile-MMLU. Conversely, the Qwen2.5-3B model exhibits relatively modest results on MMLU and MMLU-Pro but excels on Mobile-MMLU, even surpassing some of the 8B models in this benchmark.</p>
-                            <img class="bordered-image" style=" max-width: 65%;" src="images/becnhmarks_results.jpg" alt="Dataset Comparison Overview">
+                            <img class="bordered-image" style=" max-width: 65%;" src="images/benchmark_results.png" alt="Dataset Comparison Overview">
                             <br>
                             <figcaption>Table:Performance comparison of models on 3 different benchmarks</figcaption>
+
+                            <p>
+                                We conducted our benchmarks using the llama.cpp test framework (specifically we modified the
+official SwiftUI example in llama.cpp), with all Large Language Models (LLMs) converted to the GGUF
+format and quantized using the Q4 K M method. This quantization technique is widely recognized
+for its efficiency on mobile-friendly models. The backend utilized for all tests was Apple’s Metal API,
+which provided a consistent runtime environment across devices. We also report the on-device size of
+the GGUF files and parameter counting of the converted LLM.
+Two types of inference tests were conducted: - Prefilling 512: This test measures performance
+during the prefilling phase where 512 tokens are processed. - Text Generation 128: This test measures
+performance during the text generation phase where 128 tokens are generated.
+Each benchmark includes measurements for token throughput (tokens per second), CPU time (total
+CPU usage during the test), and peak resident memory usage (RAM Memory).
+                            </p>
+                            
+                            <img class="bordered-image" style="max-width: 65%; margin-bottom: 10px;" src="images/iphone.png" alt="iphone results">
+                            <br>
+                            <figcaption style="margin-bottom: 20px; display: block;">Table: Performance of Apple iPhone 14</figcaption>
+                            
+                            <img class="bordered-image" style="max-width: 65%; margin-bottom: 10px;" src="images/ipad.png" alt="ipad results">
+                            <br>
+                            <figcaption style="margin-bottom: 20px; display: block;">Table: Performance of Apple iPad Air</figcaption>
+                            
+                            <img class="bordered-image" style="max-width: 65%; margin-bottom: 10px;" src="images/macbook.png" alt="macbook results">
+                            <br>
+                            <figcaption style="margin-bottom: 20px; display: block;">Table: Performance of Apple Macbook Pro</figcaption>
+                            
                         </li>
                     </ul>
                 </div>
+                
                 
             </div>
             
