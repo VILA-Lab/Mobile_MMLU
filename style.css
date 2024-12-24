@@ -847,6 +847,15 @@ ol li.correct::before {
 .expandable-image {
     cursor: pointer;
     transition: transform 0.3s ease;
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    max-width: 800px; /* Limits the image width to a maximum of 800px */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
+    margin: 20px auto; /* Centers the image and adds spacing */
+    border: 3px solid #6a1b9a; /* Adds a purple border */
+
+    border-radius: 10px; /* Rounds the corners slightly */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
 .expandable-image:hover {

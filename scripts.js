@@ -111,7 +111,7 @@ chart.seriesContainer.children.unshift(am5.Circle.new(root, {
           font-weight="bold">MMLU</text>
       </svg>
     `)
-    // src:"images/mobile_mmlu_no_bg.png"
+    // src:"images/icons/logo_m_mmlu_v3.png"
   }));
 /////////////////////////////
 

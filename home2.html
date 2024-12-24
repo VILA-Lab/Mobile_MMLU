@@ -79,11 +79,72 @@
     
 
     <main class="content">
-        <section id="intro">
+        <!-- <section id="intro">
             <h2>Welcome to Mobile-MMLU</h2>
             <p style="font-size: 1.4em;">Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across 80 diverse fields such as Education, Healthcare, and Technology. Mobile-MMLU is redefining mobile intelligence benchmark for a smarter future.</p>
             <a href="#benchmark" class="cta-button">Explore Mobile-MMLU Benchmark</a>
+        </section> -->
+        <section id="intro" style="max-width: 1150px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+            <h2>Welcome to Mobile-MMLU</h2>
+            <p style="font-size: 1.4em; max-width: 1100px; margin: 30px auto; line-height: 1.6; color: #333;">
+                Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across <span class="highlight">80 diverse fields</span> spanning Education, Healthcare, Technology, and daily life skills. With more than 16,000 questions, Mobile-MMLU is redefining how we assess AI's capabilities in practical mobile scenarios, from basic life skills to complex problem-solving.
+            </p>
+            <div style="margin-top: 40px;">
+                <a href="#benchmark" class="cta-button">Explore Mobile-MMLU Benchmark</a>
+            </div>
         </section>
+        <!-- <section id="intro" style="
+            max-width: 1150px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            text-align: center;
+            background: linear-gradient(135deg, rgba(106, 27, 154, 0.03) 0%, rgba(100, 181, 246, 0.03) 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;">
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: radial-gradient(circle at 20% 20%, rgba(106, 27, 154, 0.05) 0%, transparent 50%),
+                                radial-gradient(circle at 80% 80%, rgba(100, 181, 246, 0.05) 0%, transparent 50%);
+                pointer-events: none;
+                "></div>
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+                background-image: repeating-linear-gradient(45deg, 
+                    rgba(106, 27, 154, 0.03) 0px, 
+                    rgba(106, 27, 154, 0.03) 1px,
+                    transparent 1px, 
+                    transparent 10px);
+                pointer-events: none;
+                "></div>
+            
+            <h2 style="position: relative; margin-bottom: 30px;">Welcome to Mobile-MMLU</h2>
+            <p style="
+                font-size: 1.4em; 
+                max-width: 1000px; 
+                margin: 30px auto; 
+                line-height: 1.6; 
+                color: #333;
+                position: relative;
+                background: rgba(255, 255, 255, 0.7);
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                Your gateway to evaluating mobile-compatible Large Language Models (LLMs) across <span class="highlight">80 diverse fields</span> spanning Education, Healthcare, Technology, and daily life skills. With <span class="highlight">16,186 questions</span>, Mobile-MMLU is redefining how we assess AI's capabilities in practical mobile scenarios, from basic life skills to complex problem-solving.
+            </p>
+            <div style="margin-top: 40px; position: relative;">
+                <a href="#benchmark" class="cta-button" style="box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);">Explore Mobile-MMLU Benchmark</a>
+            </div>
+        </section> -->
 
 
         <div class="feature-section">
@@ -495,7 +556,7 @@
                 <div class="methodology-feature" id="analysis">
                     <ul>
                         <div class="analysis-section">
-                            <h4>1. Dataset Coverage and Structure</h4>
+                            <h4>Dataset Coverage and Structure</h4>
                             <ul class="analysis-list">
                                 <li class="analysis-item">
                                     <p>
@@ -510,9 +571,39 @@
                             </ul>
                         </div>
                 
-                        <!-- Section 2: Topic Distribution -->
+                        <!-- <div class="analysis-section">
+                            <h4>Dataset Distribution Analysis</h4>
+                            <ul class="analysis-list">
+                                <li class="analysis-item">
+                                    <p>The figures below provide comprehensive insights into our dataset's structure and mobile relevance distribution:</p>
+                                    
+                                    <div class="image-comparison-container">
+                                        <div class="image-comparison-item">
+                                            <img style="max-width: 80%;" src="images/analysis/combined_question_distribution_across_categories_max_scale.png" alt="Distribution of Questions Across Sub-Categories" class="expandable-image">
+                                            <div class="caption">Distribution of questions across sub-categories in Mobile-MMLU vs MMLU, highlighting our focus on mobile-relevant domains</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p style="margin-top: 30px;">The distribution comparison reveals key differences between Mobile-MMLU and traditional benchmarks. While MMLU concentrates heavily on advanced academic subjects (seen in the left peaks), Mobile-MMLU shows a more balanced distribution across practical and everyday domains (right side of the graph), demonstrating our emphasis on mobile-relevant content.</p>
+                                    
+                                    <div class="image-comparison-container">
+                                        <div class="image-comparison-item">
+                                            <img src="images/analysis/topic_hist_kde_mobile_vs_mmlu.png" alt="Mobile Relevance Score Distribution vs MMLU" class="expandable-image">
+                                            <div class="caption">Mobile relevance score distribution comparison with MMLU</div>
+                                        </div>
+                                        <div class="image-comparison-item">
+                                            <img src="images/analysis/topic_hist_kde_mobile_vs_mmlu_pro.png" alt="Mobile Relevance Score Distribution vs MMLU-Pro" class="expandable-image">
+                                            <div class="caption">Mobile relevance score distribution comparison with MMLU-Pro</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p style="margin-top: 30px;">The mobile relevance score distributions (shown in the density plots) highlight our benchmark's distinct focus. Mobile-MMLU exhibits consistently higher relevance scores (averaging 6-8) compared to both MMLU and MMLU-Pro (averaging 2-4), validating our dataset's strong alignment with mobile use cases. This clear separation in relevance scores demonstrates Mobile-MMLU's effectiveness in evaluating LLMs specifically for mobile applications.</p>
+                                </li>
+                            </ul>
+                        </div> -->
                         <div class="analysis-section">
-                            <h4>2. Topic Distribution Analysis</h4>
+
+                            <h4>Topic Distribution Analysis</h4>
                             <ul class="analysis-list">
                                 <li class="analysis-item">
                                     <p>This visualization demonstrates the topic distribution across Mobile-MMLU, MMLU, and MMLU-Pro benchmarks. From the scatter plot, we can observe that Mobile-MMLU topics occupy a distinct semantic space compared to the topics of MMLU and MMLU-Pro benchmark. This clear separation in the topic distribution highlights Mobile-MMLU's unique focus on practical, mobile-relevant scenarios, complementing existing benchmarks rather than overlapping with them. The distinct clustering pattern validates Mobile-MMLU's contribution as a specialized benchmark tailored for evaluating mobile-oriented language models.</p>
@@ -523,7 +614,7 @@
                 
                         <!-- Section 3: Comparative Analysis -->
                         <div class="analysis-section">
-                            <h4>3. Comparative Dataset Analysis</h4>
+                            <h4>Comparative Dataset Analysis</h4>
                             <ul class="analysis-list">
                                 <li class="analysis-item">
                                     <p>This comparison highlights the differences between the basic statistics of Mobile-MMLU from MMLU and MMLU-Pro benchmark. Our benchmark features a greater number of questions, topics and and are more diverse, offering broader coverage and depth.</p>
@@ -580,7 +671,7 @@
                         </div>
 <!-- ------------------------------------------------------------- DATASET STATS TABLE BEGIN --------------------------------------------->
                         <div class="analysis-section">
-                        <h4>4. Dataset Categories and Question Distribution</h4>
+                        <h4>Dataset Categories and Question Distribution</h4>
                         <ul class="analysis-list">
                             <li class="analysis-item">
                                 <p>The following tables present a comprehensive statistical breakdown comparing Mobile-MMLU with MMLU and MMLU-Pro benchmarks. Each dataset table showcases its unique hierarchical structure - from broad categories to specific topics - along with detailed question counts. Mobile-MMLU offers extensive coverage with 80 fields and 16,186 questions, emphasizing practical, everyday knowledge areas. In contrast, MMLU contains 57 subjects with 15,573 questions focusing on academic disciplines, while MMLU-Pro features 14 specialized professional fields with 12,102 questions. This side-by-side comparison highlights how Mobile-MMLU complements existing benchmarks by introducing new categories specifically relevant to mobile use cases, while maintaining comprehensive coverage in terms of both breadth and depth.</p>                                <!-- Add table here -->
@@ -4954,9 +5045,11 @@ CPU usage during the test), and peak resident memory usage (RAM Memory).
 -->
                             <li class="analysis-item" id="result">
                                 <p> Below is a detailed heatmap visualization showing the performance of each model across different categories. The color intensity represents the accuracy percentage, with darker red indicating lower performance and darker blue indicating higher performance.</p>
-                                <img class="bordered-image" style=" max-width: 85%;" src="images/analysis/category_heatmap.png" alt="Dataset Comparison Overview">
                                 <br>
-                                <figcaption>Table:Performance comparison of models on 3 different benchmarks</figcaption>
+                                <img class="expandable-image" style=" max-width: 85%; margin-bottom: 10px;" src="images/analysis/category_heatmap.png" alt="Dataset Comparison Overview">
+                                <br>
+                                <br>
+                                <figcaption>Table:Performance comparison of different models across various categories of our benchmark</figcaption>
                             </li>
                         </li>
                     </ul>
