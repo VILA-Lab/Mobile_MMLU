@@ -1997,19 +1997,19 @@
 			</li>
 			   <li>
 				   <p>
-        We conducted hardware tests using the llama.cpp test framework, specifically modifying the official 
+        We conduct hardware tests using the llama.cpp test framework, specifically modifying the official 
         <a href="https://github.com/ggerganov/llama.cpp/tree/master/examples/llama.swiftui" target="_blank">SwiftUI example</a> 
-        from llama.cpp. These tests were performed on iOS to evaluate performance, with all Large Language Models (LLMs) converted 
+        from llama.cpp. These tests are performed on iOS to evaluate performance, with all LLMs converted 
         to the GGUF format and quantized using the <code>Q4_K_M</code> method. This quantization technique is recognized for its 
-        efficiency in mobile-optimized models. All tests used Apple’s Metal API as the backend, ensuring a consistent runtime 
-        environment across devices. Additionally, we recorded the on-device size of the GGUF files and parameter counts. It is worth 
+        efficiency in mobile-optimized models. All tests use Apple’s Metal API as the backend, ensuring a consistent runtime 
+        environment across devices. Also, we record the on-device size of the GGUF files and parameter counts. It is worth 
         noting that <code>Q4_K_M</code>-quantized models include additional quantization parameters, such as scaling factors, which 
         result in a higher parameter count compared to the original models.
     </p>
     <p>
-        We conducted two types of inference tests: the Prefilling 512 test and the Text Generation 128 test. The Prefilling 512 test 
+        We conduct two types of inference tests: the Prefilling 512 test and the Text Generation 128 test. The Prefilling 512 test 
         measures performance during the initial phase where 512 tokens are processed. The Text Generation 128 test evaluates 
-        performance during the text generation phase, where 128 tokens are generated. Each benchmark recorded performance metrics 
+        performance during the text generation phase, where 128 tokens are generated. Each benchmark records performance metrics 
         such as token throughput (measured in tokens per second) and peak memory usage (maximum RAM utilization).
     </p>
                             
